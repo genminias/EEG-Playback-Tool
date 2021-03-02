@@ -19,22 +19,11 @@ export function Calm() {
       return;
     }
 
-    const subscription = notion.calm().subscribe((calm) => {
-      const calmScore = Math.trunc(calm.probability * 100);
-      setCalm(calmScore); helloworld
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
   }, [user]);
 
   return (
     <main className="main-container">
       {user ? <Nav /> : null}
-      <div className="calm-score">
-        &nbsp;{calm}% <div className="calm-word">Calm</div>
-      </div>
     </main>
   );
 }
