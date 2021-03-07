@@ -5,14 +5,22 @@ export function Footer() {
     <footer className="card-footer">
       <a
         className="card-link card-footer-cta"
-        href="https://github.com/genminias/EEG-Playback-Tool"
+        href="https://github.com/neurosity/notion-react-starter"
         target="_blank"
         rel="noopener noreferrer"
       >
         View source code
       </a>
       <div className="card-footer-credits">
-        Built by UA Capstone Group 4
+        Built by{" "}
+        <a
+          className="card-link"
+          href="https://neurosity.co"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Neurosity
+        </a>
       </div>
     </footer>
   );
