@@ -13,7 +13,7 @@ import { useNotion } from "./services/notion";
 export function App() {
   return (
     <ProvideNotion>
-      <Routes />
+      <Routes/>
     </ProvideNotion>
   );
 }

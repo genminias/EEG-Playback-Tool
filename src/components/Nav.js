@@ -24,6 +24,9 @@ export function Nav() {
       <button onClick={share data} className="card-btn">
         Share Data
       </button>
+      <button onClick={status component} className="card-btn">
+        Status
+      </button>
       <button onClick={settings page} className="card-btn">
         Settings
       </button> */}
