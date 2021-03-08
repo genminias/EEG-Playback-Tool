@@ -29,4 +29,4 @@
 - npm i electron-is-dev
 - npm i -D concurrently electron electron-builder wait-on cross-env
 - npm install 
-- npm start 
+- npm run electron-dev
