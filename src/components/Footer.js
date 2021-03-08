@@ -12,7 +12,7 @@ export function Footer() {
         View source code
       </a>
       <div className="card-footer-credits">
-        Built by UA Capstone Group 4
+        Built by CS495 Team 4
       </div>
     </footer>
   );

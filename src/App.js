@@ -10,7 +10,7 @@ import { Calm } from "./pages/Calm";
 
 import { useNotion } from "./services/notion";
 
-export default function App() {
+export function App() {
   return (
     <ProvideNotion>
       <Routes />
