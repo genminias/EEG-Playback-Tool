@@ -1,31 +1,29 @@
-const electron = require('electron');
-const { app, BrowserWindow } = electron;
-const path = require('path');
-const isDev = require('electron-is-dev');
-
-let mainWindow = null;
-app.on('ready', createWindow);
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-});
-app.on('activate', function () {
-  if (mainWindow === null) {
-    createWindow()
-  }
-});
-function createWindow() {
-  mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 1024,
-    title: "EEG Playback Tool"
-  });
-  mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
-  mainWindow.on('closed', function () {
-    mainWindow = null
-  })
-  mainWindow.on('page-title-updated', function (e) {
-    e.preventDefault()
-  });
+const electron = require('electron'),
+  app = electron.app,
+  BrowserWindow = electron.BrowserWindow;
+   
+const path = require('path'),
+  isDev = require('electron-is-dev');
+   
+let mainWindow;
+   
+const createWindow = () => {
+  mainWindow = new BrowserWindow({ width: 480, height: 320 })
+  const appUrl = isDev ? 'http://localhost:3000' :
+    `file://${path.join(__dirname, '../build/index.html')}`
+  mainWindow.loadURL(appUrl)
+  mainWindow.maximize()
+  mainWindow.setFullScreen(false)
+  mainWindow.on('closed', () => mainWindow = null)
 }
+app.on('ready', createWindow)
+app.on('window-all-closed', () => {
+  // Follow OS convention on whether to quit app when
+  // all windows are closed.
+  if (process.platform !== 'darwin') { app.quit() }
+})
+app.on('activate', () => {
+  // If the app is still open, but no windows are open,
+  // create one when the app comes into focus.
+  if (mainWindow === null) { createWindow() }
+})
