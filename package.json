@@ -1,5 +1,5 @@
 {
-  "name": "EGG-Playback-Tool",
+  "name": "eeg-playback-tool",
   "version": "0.1.0",
   "author": "cs495",
   "main": "public/electron.js",
