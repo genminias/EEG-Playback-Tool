@@ -1,7 +1,6 @@
 import React from "react";
 
-export function Header() {
+export function Graph() {
 
 
 }
-
