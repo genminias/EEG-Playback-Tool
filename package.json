@@ -13,7 +13,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.4.3",
-    "react-use": "^13.21.0"
+    "react-use": "^13.21.0",
+    "chart-js": "^2.9.4"
   },
   "build": {
     "files": [
