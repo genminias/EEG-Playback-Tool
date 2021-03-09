@@ -13,17 +13,32 @@ export function Datasets() {
         }
       }, [user]);
 
-    /*useEffect(() => {
+    useEffect(() => {
         if (!user) {
             return;
         }
-        const memoriesRef = notion.__getApp().firestore.collection("memories");
-        memoriesRef.where("type", "==", "epoch").get();
-        if (memoriesRef.empty) {
-            return (<h2>No memories exist</h2>);
+        getMemories();
+        async function getMemories() {
+            const memoriesRef = notion.__getApp().firestore().collection("memories");
+            const snapshot = await memoriesRef.where("type", "==", "epoch").where("userId", "==", user.uid).get();
+            snapshot.forEach(doc => {
+                const memory = doc.data();
+                dataFunction(memory.id).then(console.log);
+                /* console.log(doc.data()); */
+            });
         }
-        document.write(memoriesRef.length);
-    });
+    }, [user]);
+
+    /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
+
+    function dataFunction(memoryId) {
+        return notion.__getApp()
+            .functions()
+            .httpsCallable("samplesConverter")({
+              memoryId: memoryId,
+              formatType: "json"
+            })
+    }
 
     return(
         <main className="datasets">
@@ -31,5 +46,5 @@ export function Datasets() {
                 <h1>test</h1>
             </div>
         </main>
-    );*/
+    );
 }

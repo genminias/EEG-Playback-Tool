@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { navigate } from "@reach/router";
 
-import { notion, useNotion } from "../services/notion";
+import { useNotion } from "../services/notion";
 import { Nav } from "../components/Nav";
 import { Header } from "../components/Header";
 import { Player } from "../components/Player";
@@ -19,7 +19,8 @@ export function Dashboard() {
 
       return (
         <main className="dashboard">
-            <h1>hi buddy</h1>
+            <Header />
+            <Datasets />
             {user ? <Nav /> : null}
             <Graph />
         </main>
