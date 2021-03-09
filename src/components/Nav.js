@@ -56,373 +56,373 @@ export function Nav() {
         Buttons?
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ༼ ಠل͟ಠ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ̿̿ ̿̿ ̿’̿’̵͇̿̿з=༼ ▀̿̿Ĺ̯̿̿▀̿ ̿ ༽
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ヽ༼ ಠ益ಠ ༽ﾉ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ( ┐΄✹ਊ✹)┐
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+      ಠ_ರೃ
       </button>
       <button onClick={goToRecordings} className="card-btn">
         Recordings
@@ -1202,16 +1202,16 @@ export function Nav() {
         Recordings
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+        *Bonk*
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+        Go
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+        To 
       </button>
       <button onClick={goToRecordings} className="card-btn">
-        Recordings
+        Jail
       </button>
       <button onClick={goToRecordings} className="card-btn">
         Recordings
