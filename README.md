@@ -26,6 +26,8 @@
 
 
 ## Running Prototype
+- npm install @neurosity/notion dotenv
+- npm install @reach/router
 - npm i electron-is-dev
 - npm i -D concurrently electron electron-builder wait-on cross-env
 - npm install 
