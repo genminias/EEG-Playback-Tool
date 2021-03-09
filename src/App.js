@@ -8,6 +8,9 @@ import { Login } from "./pages/Login";
 import { Logout } from "./pages/Logout";
 import { Analysis } from "./pages/Analysis";
 import { Dashboard } from "./pages/Dashboard";
+import { Settings } from "./pages/Settings";
+import { Recordings } from "./pages/Recordings";
+
 
 import { useNotion } from "./services/notion";
 
@@ -39,6 +42,8 @@ function Routes() {
       <Devices path="/devices" />
       <Login path="/login" />
       <Logout path="/logout" />
+      <Settings path="/settings" />
+      <Recordings path="/recordings" />
     </Router>
   );
 }

@@ -8,6 +8,13 @@ export function Nav() {
   function goToLogout() {
     navigate("/logout");
   }
+  function goToSettings() {
+    navigate("/settings");
+  }
+  function goToRecordings() {
+    navigate("/recordings");
+  }
+
 
   return (
     <nav className="card">
@@ -26,10 +33,1507 @@ export function Nav() {
       </button>
       <button onClick={status component} className="card-btn">
         Status
-      </button>
-      <button onClick={settings page} className="card-btn">
+      </button>*/}
+      <button onClick={goToSettings} className="card-btn">
         Settings
-      </button> */}
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        How
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        You
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Like
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        These
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Buttons?
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        Recordings
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        (┛◉Д◉)┛彡┻━┻
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        ┬─┬ノ( º _ ºノ)
+      </button>
+      <button onClick={goToRecordings} className="card-btn">
+        We made 500 buttons for you ¯\_(ツ)_/¯
+      </button>
       <Footer />
     </nav>
   );
