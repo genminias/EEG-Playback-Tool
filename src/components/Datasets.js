@@ -22,9 +22,10 @@ export function Datasets() {
             const memoriesRef = notion.__getApp().firestore().collection("memories");
             const snapshot = await memoriesRef.where("type", "==", "epoch").where("userId", "==", user.uid).get();
             snapshot.forEach(doc => {
-                const memory = doc.data();
-                dataFunction(memory.id).then(console.log);
-                /* console.log(doc.data()); */
+                // const memory = doc.data();
+                // dataFunction(memory.id).then(console.log);
+                // /* console.log(doc.data()); */
+                
             });
         }
     }, [user]);

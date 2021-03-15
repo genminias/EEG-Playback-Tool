@@ -6,7 +6,7 @@ import { Nav } from "../components/Nav";
 import { Header } from "../components/Header";
 import { Player } from "../components/Player";
 import { Graph } from "../components/Graph"; /* this should be added straight to player */
-import { Datasets } from "../components/Datasets";
+import { Recording } from "../components/Recording";
 
 export function Dashboard() {
     const { user } = useNotion();
@@ -20,7 +20,7 @@ export function Dashboard() {
       return (
         <main className="dashboard">
             <Header />
-            <Datasets />
+            <Recording /> 
             {user ? <Nav /> : null}
             <Graph />
         </main>

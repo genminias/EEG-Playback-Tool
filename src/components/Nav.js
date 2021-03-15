@@ -11,9 +11,6 @@ export function Nav() {
   function goToSettings() {
     navigate("/settings");
   }
-  function goToRecordings() {
-    navigate("/recordings");
-  }
 
 
   return (
@@ -36,9 +33,6 @@ export function Nav() {
       </button>*/}
       <button onClick={goToSettings} className="card-btn">
         Settings
-      </button>
-      <button onClick={goToRecordings} className="card-btn">
-        Recordings
       </button>
       <Footer />
     </nav>

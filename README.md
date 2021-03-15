@@ -29,7 +29,8 @@
 - npm install @neurosity/notion dotenv
 - npm install @reach/router
 - npm install chart.js --save
-- npm i electron-is-dev
-- npm i -D concurrently electron electron-builder wait-on cross-env
+- npm install react-native-wheel-scroll-picker --save
+<!-- - npm i electron-is-dev
+- npm i -D concurrently electron electron-builder wait-on cross-env -->
 - npm install 
 - npm run electron-dev
