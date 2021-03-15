@@ -18,6 +18,6 @@ export function Settings() {
             <button onClick={goToDashboard} className="card-btn">
                 Back
             </button>
-            </nav>
+        </nav>
     );
 }
