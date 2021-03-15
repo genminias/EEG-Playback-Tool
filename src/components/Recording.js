@@ -6,7 +6,8 @@ import "firebase/firestore";
 
 export function Recording () {
     const { user } = useNotion();
-    const [snapshot] = useState([]);
+    // const [snapshot, setSnapshot] = useState([]);
+    // const [recordingName, setRecordingName] = useState("");
 
     useEffect(() => {
         if (!user) {
@@ -22,14 +23,21 @@ export function Recording () {
         async function getMemories() {
             const memoriesRef = notion.__getApp().firestore().collection("memories");
             const snapshot = await memoriesRef.where("type", "==", "epoch").where("userId", "==", user.uid).get();
+            //setSnapshot(snapshot);
+            var select = document.getElementById("recordingSelect");
             snapshot.forEach(doc => {
                 // const memory = doc.data();
                 // dataFunction(memory.id).then(console.log);
-                console.log(doc.data().name);
-                
+                // console.log(doc.data());
+                var opt = doc.data().name;
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
             });
+            console.log(snapshot.length)
         }
-    }, [user, snapshot]);
+    }, [user]);
 
     /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
 
@@ -43,22 +51,12 @@ export function Recording () {
     }
 
     return(
-        <main className="main-container">
-            {/* <form className="card login-form" onSubmit={onSubmit}> */}
-                <div className="row">
-                    <label>Select a Recording</label>
-                    <select
-                    name="recordingSelect"
-                    value="recording"
-                    >
-                        {snapshot.map((doc) => (
-                            <option key={doc.data().id} value={doc.data().id}>
-                                {doc.data().name}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            {/* </form> */}
+        <main className="recordings-container">
+            <div className="row">
+                <select id="recordingSelect">
+                    <option>Choose a recording</option>
+                </select>
+            </div>
         </main>
         )
     }
