@@ -6,13 +6,13 @@ import "firebase/firestore";
 
 export function Recording () {
     const { user } = useNotion();
-    //const [snapshot, setSnapshot] = useState([]); // is it an array ? maybe it's a {}
+    const [snapshot, setSnapshot] = useState([]); // is it an array ? maybe it's a {}
     const [recordingName, setRecordingName] = useState(""); //change or add one for id to pull URL in onSubmit()
     const [loading, setLoading] = useState(true);
     // const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState("");
 
-    useEffect(() => { //useEffectOnce ?
+    useEffect(() => {
         if (!user) { // || submitting
             navigate("/login");
         }
@@ -21,7 +21,7 @@ export function Recording () {
         getMemories(); //I'm afraid that if this rerenders it might just keep appending names
         setLoading(false);
 
-    }, [user]); //snapshot
+    }, [user, snapshot]);
 
     /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
 
@@ -36,7 +36,6 @@ export function Recording () {
                 setError(error.message);
             });
         console.log(typeof snapshot); //test - object
-        //setSnapshot(snapshot);
         var select = document.getElementById("recordingSelect");
         snapshot
             .forEach(doc => {
