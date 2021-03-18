@@ -21,35 +21,35 @@ export function Recording () {
         getMemories(); //I'm afraid that if this rerenders it might just keep appending names
         setLoading(false);
 
+        // we need error handling here
+        async function getMemories() {
+            const memoriesRef = notion.__getApp().firestore().collection("memories");
+            const snapshot = await memoriesRef
+                .where("type", "==", "epoch")
+                .where("userId", "==", user.uid)
+                .get()
+                .catch((error) => { // not sure if this catch works
+                    setError(error.message);
+                });
+            console.log(typeof snapshot); //test - object
+            var select = document.getElementById("recordingSelect");
+            snapshot
+                .forEach(doc => {
+                    // const memory = doc.data();
+                    // dataFunction(memory.id).then(console.log);
+                    // console.log(doc.data());
+                    var opt = doc.data().name;
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
+                });
+            console.log(snapshot.length) //test - undefined
+    }
+
     }, [user, snapshot]);
 
     /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
-
-    // we need error handling here
-    async function getMemories() {
-        const memoriesRef = notion.__getApp().firestore().collection("memories");
-        const snapshot = await memoriesRef
-            .where("type", "==", "epoch")
-            .where("userId", "==", user.uid)
-            .get()
-            .catch((error) => { // not sure if this catch works
-                setError(error.message);
-            });
-        console.log(typeof snapshot); //test - object
-        var select = document.getElementById("recordingSelect");
-        snapshot
-            .forEach(doc => {
-                // const memory = doc.data();
-                // dataFunction(memory.id).then(console.log);
-                // console.log(doc.data());
-                var opt = doc.data().name;
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
-            });
-        console.log(snapshot.length) //test - undefined
-    }
 
     function dataFunction(memoryId) {
         return notion.__getApp()
@@ -69,8 +69,8 @@ export function Recording () {
 
     return(
         <main className="recordings-container">
-            <form className="recordings-form" onSubmit={onSubmit}>
-                {!!error ? <h4 className="recordings-error">{error}</h4> : null}
+            <form className="card recordings-form" onSubmit={onSubmit}>
+                {!!error ? <h4 className="card-error">{error}</h4> : null}
                 <div className="row">
                     <select
                         id="recordingSelect"
@@ -82,7 +82,7 @@ export function Recording () {
                     </select>
                 </div>
                 <div className="row">
-                    <button type="submit" className="recordings-button" disabled={loading}>
+                    <button type="submit" className="card-button" disabled={loading}>
                         {loading ? "Loading Recordings..." : "Select"}
                     </button>
                 </div>
