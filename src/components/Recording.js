@@ -35,9 +35,9 @@ export function Recording () {
             var select = document.getElementById("recordingSelect");
             snapshot
                 .forEach(doc => {
-                    // const memory = doc.data();
-                    // dataFunction(memory.id).then(console.log);
-                    // console.log(doc.data());
+                    const memory = doc.data();
+                    dataFunction(memory.id).then(console.log);
+                    console.log(doc.data());
                     var opt = doc.data().name;
                     var el = document.createElement("option");
                     el.textContent = opt;
@@ -47,7 +47,7 @@ export function Recording () {
             console.log(snapshot.length) //test - undefined
     }
 
-    }, [user, snapshot]);
+    }, [user]);
 
     /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
 
@@ -85,6 +85,8 @@ export function Recording () {
                     <button type="submit" className="card-button" disabled={loading}>
                         {loading ? "Loading Recordings..." : "Select"}
                     </button>
+                    <button onClick={() => window.location.reload(false)}>Update Recordings</button>
+
                 </div>
             </form>
         </main>
