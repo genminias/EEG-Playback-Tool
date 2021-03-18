@@ -6,55 +6,51 @@ import "firebase/firestore";
 
 export function Recording () {
     const { user } = useNotion();
-    const [snapshot, setSnapshot] = useState([]);
-    const [recordingName, setRecordingName] = useState("");
+    //const [snapshot, setSnapshot] = useState([]); // is it an array ? maybe it's a {}
+    const [recordingName, setRecordingName] = useState(""); //change or add one for id to pull URL in onSubmit()
     const [loading, setLoading] = useState(true);
     // const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState("");
 
-    useEffect(() => {
-        if (!user) {
-          navigate("/login");
-        }
-      }, [user]);
-
-    useEffect(() => {
+    useEffect(() => { //useEffectOnce ?
         if (!user) { // || submitting
-            return;
+            navigate("/login");
         }
 
         setLoading(true);
+        getMemories(); //I'm afraid that if this rerenders it might just keep appending names
+        setLoading(false);
 
-        // we need error handling here
-        getMemories();
-        async function getMemories() {
-            const memoriesRef = notion.__getApp().firestore().collection("memories");
-            const snapshot = await memoriesRef
-                .where("type", "==", "epoch")
-                .where("userId", "==", user.uid)
-                .get()
-                .catch((error) => { //literally no idea if this will work
-                    setError(error.message);
-                });
-            setSnapshot(snapshot);
-            var select = document.getElementById("recordingSelect");
-            snapshot
-                .forEach(doc => {
-                    // const memory = doc.data();
-                    // dataFunction(memory.id).then(console.log);
-                    // console.log(doc.data());
-                    var opt = doc.data().name;
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
-                })
-            setLoading(false);
-            console.log(snapshot.length) //test
-        }
-    }, [user, snapshot]);
+    }, [user]); //snapshot
 
     /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
+
+    // we need error handling here
+    async function getMemories() {
+        const memoriesRef = notion.__getApp().firestore().collection("memories");
+        const snapshot = await memoriesRef
+            .where("type", "==", "epoch")
+            .where("userId", "==", user.uid)
+            .get()
+            .catch((error) => { // not sure if this catch works
+                setError(error.message);
+            });
+        console.log(typeof snapshot); //test - object
+        //setSnapshot(snapshot);
+        var select = document.getElementById("recordingSelect");
+        snapshot
+            .forEach(doc => {
+                // const memory = doc.data();
+                // dataFunction(memory.id).then(console.log);
+                // console.log(doc.data());
+                var opt = doc.data().name;
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
+            });
+        console.log(snapshot.length) //test - undefined
+    }
 
     function dataFunction(memoryId) {
         return notion.__getApp()
@@ -66,7 +62,8 @@ export function Recording () {
     }
 
     function onSubmit(event) {
-        event.preventDefault();
+        event.preventDefault(); // idk what this actually does...
+        console.log("ayeo"); //test
         // setSubmitting(true);
         //add function that loads dataset here
     }
