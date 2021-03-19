@@ -6,7 +6,7 @@ import "firebase/firestore";
 
 export function Recording () {
     const { user } = useNotion();
-    const [snapshot, setSnapshot] = useState([]); // is it an array ? maybe it's a {}
+    // const [snapshot, setSnapshot] = useState([]); // is it an array ? maybe it's a {}
     const [recordingName, setRecordingName] = useState(""); //change or add one for id to pull URL in onSubmit()
     const [loading, setLoading] = useState(true);
     // const [submitting, setSubmitting] = useState(false);
@@ -18,7 +18,7 @@ export function Recording () {
         }
 
         setLoading(true);
-        getMemories(); //I'm afraid that if this rerenders it might just keep appending names
+        getMemories();
         setLoading(false);
 
         // we need error handling here
@@ -31,22 +31,21 @@ export function Recording () {
                 .catch((error) => { // not sure if this catch works
                     setError(error.message);
                 });
-            console.log(typeof snapshot); //test - object
+            //console.log(typeof snapshot); //test - object
             var select = document.getElementById("recordingSelect");
             snapshot
                 .forEach(doc => {
-                    const memory = doc.data();
-                    dataFunction(memory.id).then(console.log);
-                    console.log(doc.data());
+                    //const memory = doc.data();
+                    //dataFunction(memory.id).then(console.log);
+                    //console.log(doc.data());
                     var opt = doc.data().name;
                     var el = document.createElement("option");
                     el.textContent = opt;
                     el.value = opt;
                     select.appendChild(el);
                 });
-            console.log(snapshot.length) //test - undefined
-    }
-
+            //console.log(snapshot.length) //test - undefined
+        }
     }, [user]);
 
     /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
@@ -85,7 +84,7 @@ export function Recording () {
                     <button type="submit" className="card-button" disabled={loading}>
                         {loading ? "Loading Recordings..." : "Select"}
                     </button>
-                    <button onClick={() => window.location.reload(false)}>Update Recordings</button>
+                    <button onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
 
                 </div>
             </form>
