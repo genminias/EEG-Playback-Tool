@@ -20,7 +20,7 @@ export function Dashboard() {
       return (
         <main className="dashboard">
             <Header />
-            <Recording /> 
+            {/* <Recording />  */}
             {user ? <Nav /> : null}
             <Graph />
         </main>
