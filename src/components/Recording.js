@@ -6,14 +6,13 @@ import "firebase/firestore";
 
 export function Recording () {
     const { user } = useNotion();
-    // const [snapshot, setSnapshot] = useState([]); // is it an array ? maybe it's a {}
-    const [recordingName, setRecordingName] = useState(""); //change or add one for id to pull URL in onSubmit()
+    const [recordingName, setRecordingName] = useState("");
     const [loading, setLoading] = useState(true);
-    // const [submitting, setSubmitting] = useState(false);
     const [error, setError] = useState("");
+    const [recordingsInfo, setRecordingsInfo] = useState([]);
 
     useEffect(() => {
-        if (!user) { // || submitting
+        if (!user) {
             navigate("/login");
         }
 
@@ -21,8 +20,9 @@ export function Recording () {
         getMemories();
         setLoading(false);
 
-        // we need error handling here
+        // we need error handling here, ex: if there's no recordings
         async function getMemories() {
+            var tempInfo = [];
             const memoriesRef = notion.__getApp().firestore().collection("memories");
             const snapshot = await memoriesRef
                 .where("type", "==", "epoch")
@@ -31,39 +31,49 @@ export function Recording () {
                 .catch((error) => { // not sure if this catch works
                     setError(error.message);
                 });
-            //console.log(typeof snapshot); //test - object
             var select = document.getElementById("recordingSelect");
-            snapshot
-                .forEach(doc => {
-                    //const memory = doc.data();
-                    //dataFunction(memory.id).then(console.log);
-                    //console.log(doc.data());
-                    var opt = doc.data().name;
-                    var el = document.createElement("option");
-                    el.textContent = opt;
-                    el.value = opt;
-                    select.appendChild(el);
-                });
-            //console.log(snapshot.length) //test - undefined
+            snapshot.forEach(doc => {
+                /* const memory = doc.data();
+                dataFunction(memory.id).then(console.log); */
+                //console.log(doc.data());
+                tempInfo.push(doc.data());
+                var opt = doc.data().name;
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
+            });
+            setRecordingsInfo(tempInfo);
         }
     }, [user]);
 
-    /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
+    /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything */
 
-    function dataFunction(memoryId) {
+    /* function dataFunction(memoryId) {
         return notion.__getApp()
             .functions()
             .httpsCallable("samplesConverter")({
               memoryId: memoryId,
               formatType: "json"
             })
-    }
+    } */
 
     function onSubmit(event) {
-        event.preventDefault(); // idk what this actually does...
-        console.log("ayeo"); //test
-        // setSubmitting(true);
-        //add function that loads dataset here
+        event.preventDefault(); // do we want this to happen ?
+        for (var i = 0; i < recordingsInfo.length; i++) {
+            if (recordingName == recordingsInfo[i].name) {
+                console.log("found " + recordingsInfo[i].name + " " + recordingsInfo[i].json); //test
+                var xhr = new XMLHttpRequest();
+                xhr.responseType = 'json';
+                xhr.onload = (event) => {
+                    var eegDoc = xhr.response;
+                    console.log(typeof eegDoc); //test - object
+                    console.log(eegDoc.channels); //test - this works it returns 8 !
+                };
+                xhr.open('GET', recordingsInfo[i].json);
+                xhr.send();
+            }
+        }
     }
 
     return(
@@ -82,7 +92,7 @@ export function Recording () {
                 </div>
                 <div className="row">
                     <button type="submit" className="card-button" disabled={loading}>
-                        {loading ? "Loading Recordings..." : "Select"}
+                        {loading ? "Loading Recordings..." : "Select Recording"}
                     </button>
                     <button onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
 
