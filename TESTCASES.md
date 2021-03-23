@@ -11,11 +11,11 @@
 
 ## Case 3: Pull Dataset from Firebase
     - Test: Select dataset from dropdown menu, click select 
-    - Expected Result: The correct dataset is displayed in the developer consol with all relievant information 
+    - Expected Result: The correct dataset is displayed in the developer console with all relevant information 
 
 ## Case 4: Navigating between pages
     - Test: Select settings page, select dashboard page
-    - Expected Result: User is able to navigates to and from the different pages on the app. 
+    - Expected Result: User is able to navigate to and from the different pages on the app. 
 
 ## Case 5: Logout functionality
     - Test: Select logout button to logout of account
