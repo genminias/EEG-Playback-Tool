@@ -34,3 +34,5 @@
 - npm i -D concurrently electron electron-builder wait-on cross-env -->
 - npm install 
 - npm run electron-dev
+
+## For Test Cases Read TESTCASES.MD
