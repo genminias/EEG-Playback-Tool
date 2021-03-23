@@ -35,4 +35,5 @@
 - npm install 
 - npm run electron-dev
 
-## For Test Cases Read TESTCASES.MD
+## Test Cases 
+- Read TESTCASES.MD
