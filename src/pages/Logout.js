@@ -3,6 +3,9 @@ import { navigate } from "@reach/router";
 
 import { useNotion } from "../services/notion";
 
+/**
+ * Logout page
+ */
 export function Logout() {
   const { logoutNotion } = useNotion();
 

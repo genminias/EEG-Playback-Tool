@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Footer component
+ * Used in dashboard card
+ */
 export function Footer() {
   return (
     <footer className="card-footer">

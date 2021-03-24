@@ -3,6 +3,10 @@ import { Link } from "@reach/router";
 
 import { useNotion } from "../services/notion";
 
+/**
+ * Displays status of currently selected Neurosity device
+ * Used in dashboard card
+ */
 const statesLabels = {
   booting: "Starting OS...",
   shuttingOff: "Shutting off...",

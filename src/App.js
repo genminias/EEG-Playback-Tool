@@ -9,11 +9,14 @@ import { Logout } from "./pages/Logout";
 import { Analysis } from "./pages/Analysis";
 import { Dashboard } from "./pages/Dashboard";
 import { Settings } from "./pages/Settings";
-// import { Recordings } from "./pages/Recordings";
-
+// why aren't the other page imports here ? are they needed ?
 
 import { useNotion } from "./services/notion";
 
+/**
+ * Main function that routes all pages
+ * Prompts a user to login if they weren't already logged in
+ */
 export function App() {
   return (
     <ProvideNotion>
@@ -43,7 +46,6 @@ function Routes() {
       <Login path="/login" />
       <Logout path="/logout" />
       <Settings path="/settings" />
-      {/* <Recordings path="/recordings" /> */}
     </Router>
   );
 }

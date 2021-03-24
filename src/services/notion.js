@@ -3,6 +3,9 @@ import { useState, useEffect, useCallback } from "react";
 import { Notion } from "@neurosity/notion";
 import useLocalStorage from "react-use/lib/useLocalStorage";
 
+/**
+ * Sets up Notion device for use across app
+ */
 export const notion = new Notion({
   autoSelectDevice: false
 });

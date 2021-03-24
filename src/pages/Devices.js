@@ -3,6 +3,13 @@ import { navigate } from "@reach/router";
 
 import { notion, useNotion } from "../services/notion";
 
+// note: if we don't move this page, would it be beneficial to have a button that routes back to it ?
+// or maybe add another drop down to the card for the devices...
+
+/**
+ * Neurosity device handling page
+ * Currently positioned between the login and dashboard pages
+ */
 export function Devices() {
   const { user, lastSelectedDeviceId } = useNotion();
   const [devices, setDevices] = useState([]);

@@ -1,12 +1,14 @@
 import React from "react";
 
+/**
+ * Header component
+ * Used in dashboard
+ */
 export function Header() {
-//Logout function goes here
-return (
-<div className="title">
-<h1> EEG Playback Tool</h1>
-</div>
-);
-
+    return (
+        <div className="title">
+            <h1> EEG Playback Tool</h1>
+        </div>
+    );
 }
 

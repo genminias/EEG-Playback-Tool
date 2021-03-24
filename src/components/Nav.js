@@ -4,15 +4,19 @@ import { navigate } from "@reach/router";
 import { Status } from "./Status";
 import { Footer } from "./Footer";
 
+/**
+ * Navigation bar that routes to different pages from the dashboard
+ */
 export function Nav() {
+
   function goToLogout() {
     navigate("/logout");
     window.location.reload(false);
   }
+
   function goToSettings() {
     navigate("/settings");
   }
-
 
   return (
     <nav className="card">
@@ -25,9 +29,6 @@ export function Nav() {
       </button>
       <button onClick={hyperlink to dev console} className="card-btn">
         Dev Console
-      </button>
-      <button onClick={share data} className="card-btn">
-        Share Data
       </button>
       <button onClick={status component} className="card-btn">
         Status

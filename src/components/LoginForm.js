@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+/**
+ * Login form
+ * Used in login page
+ */
 export function LoginForm({
   onLogin,
   loading,

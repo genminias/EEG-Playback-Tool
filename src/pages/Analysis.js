@@ -1,11 +1,13 @@
-/* Rename to Analysis.js and add other analysis tools */
-
 import React, { useState, useEffect } from "react";
 import { navigate } from "@reach/router";
 
 import { notion, useNotion } from "../services/notion";
 import { Nav } from "../components/Nav";
 
+/**
+ * Analysis page - UNDER CONSTRUCTION
+ * Will store our analysis component
+ */
 export function Analysis() {
   const { user } = useNotion();
   const [calm, setCalm] = useState(0);

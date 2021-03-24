@@ -4,6 +4,10 @@ import { navigate } from "@reach/router";
 import { notion, useNotion } from "../services/notion";
 import "firebase/firestore";
 
+/**
+ * Displays a user's recordings
+ * A user can select a recording for use in our playback tool
+ */
 export function Recording () {
     const { user } = useNotion();
     const [recordingName, setRecordingName] = useState("");
@@ -46,8 +50,6 @@ export function Recording () {
             setRecordingsInfo(tempInfo);
         }
     }, [user]);
-
-    /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything */
 
     /* function dataFunction(memoryId) {
         return notion.__getApp()

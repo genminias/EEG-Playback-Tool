@@ -1,11 +1,13 @@
 import React from "react";
 import { navigate } from "@reach/router";
 
-import { useNotion } from "../services/notion";
-import { Nav } from "../components/Nav";
+//import { useNotion } from "../services/notion";
+//import { Nav } from "../components/Nav";
 
-
-
+/**
+ * Settings page - UNDER CONSTRUCTION
+ * Will be able to change misc. app settings from here
+ */
 export function Settings() {
     function goToDashboard() {
         navigate("/");
