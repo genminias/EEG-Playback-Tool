@@ -21,7 +21,14 @@ export function Player() {
 
 function readData() {
      var eegdata = { /* the global json variable */};
-     
+     $.getJSON("var/eeg.json", function(data) {
+         //example of mapping json data to dataset needed for line graph
+       /* var labels = data.test_data.map(function(e) {
+           return e[0];
+        });
+        var data = data.test_data.map(function(e) {
+           return e[1];
+        */})
      lineChartData = {};             //declare an object
      lineChartData.labels  = [];    //add 'labels' element to object (X axis)
      lineChartData.datasets = [];  //add 'datasets' array element to object
