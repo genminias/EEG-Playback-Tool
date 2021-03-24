@@ -6,57 +6,98 @@ import "firebase/firestore";
 
 export function Recording () {
     const { user } = useNotion();
-    // const [snapshot, setSnapshot] = useState([]);
-    // const [recordingName, setRecordingName] = useState("");
+    const [recordingName, setRecordingName] = useState("");
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
+    const [recordingsInfo, setRecordingsInfo] = useState([]);
 
     useEffect(() => {
         if (!user) {
-          navigate("/login");
+            navigate("/login");
         }
-      }, [user]);
 
-    useEffect(() => {
-        if (!user) {
-            return;
-        }
+        setLoading(true);
         getMemories();
+        setLoading(false);
+
+        // we need error handling here, ex: if there's no recordings
         async function getMemories() {
+            var tempInfo = [];
             const memoriesRef = notion.__getApp().firestore().collection("memories");
-            const snapshot = await memoriesRef.where("type", "==", "epoch").where("userId", "==", user.uid).get();
-            //setSnapshot(snapshot);
+            const snapshot = await memoriesRef
+                .where("type", "==", "epoch")
+                .where("userId", "==", user.uid)
+                .get()
+                .catch((error) => { // not sure if this catch works
+                    setError(error.message);
+                });
             var select = document.getElementById("recordingSelect");
             snapshot.forEach(doc => {
-                // const memory = doc.data();
-                // dataFunction(memory.id).then(console.log);
-                // console.log(doc.data());
+                /* const memory = doc.data();
+                dataFunction(memory.id).then(console.log); */
+                //console.log(doc.data());
+                tempInfo.push(doc.data());
                 var opt = doc.data().name;
                 var el = document.createElement("option");
                 el.textContent = opt;
                 el.value = opt;
                 select.appendChild(el);
             });
-            console.log(snapshot.length)
+            setRecordingsInfo(tempInfo);
         }
     }, [user]);
 
-    /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything ???? */
+    /* USE HTTP REQUEST to get URL to download, also don't use data() unless we want everything */
 
-    function dataFunction(memoryId) {
+    /* function dataFunction(memoryId) {
         return notion.__getApp()
             .functions()
             .httpsCallable("samplesConverter")({
               memoryId: memoryId,
               formatType: "json"
             })
+    } */
+
+    function onSubmit(event) {
+        event.preventDefault(); // do we want this to happen ?
+        for (var i = 0; i < recordingsInfo.length; i++) {
+            if (recordingName == recordingsInfo[i].name) {
+                console.log("found " + recordingsInfo[i].name + " " + recordingsInfo[i].json); //test
+                var xhr = new XMLHttpRequest();
+                xhr.responseType = 'json';
+                xhr.onload = (event) => {
+                    var eegDoc = xhr.response;
+                    console.log(typeof eegDoc); //test - object
+                    console.log(eegDoc.channels); //test - this works it returns 8 !
+                };
+                xhr.open('GET', recordingsInfo[i].json);
+                xhr.send();
+            }
+        }
     }
 
     return(
         <main className="recordings-container">
-            <div className="row">
-                <select id="recordingSelect">
-                    <option>Choose a recording</option>
-                </select>
-            </div>
+            <form className="card recordings-form" onSubmit={onSubmit}>
+                {!!error ? <h4 className="card-error">{error}</h4> : null}
+                <div className="row">
+                    <select
+                        id="recordingSelect"
+                        value={recordingName}
+                        disabled={loading}
+                        onChange={(e) => setRecordingName(e.target.value)}
+                    >
+                        <option>Choose a recording</option>
+                    </select>
+                </div>
+                <div className="row">
+                    <button type="submit" className="card-button" disabled={loading}>
+                        {loading ? "Loading Recordings..." : "Select Recording"}
+                    </button>
+                    <button onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
+
+                </div>
+            </form>
         </main>
         )
-    }
+}

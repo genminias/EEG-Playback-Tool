@@ -7,6 +7,7 @@ import { Footer } from "./Footer";
 export function Nav() {
   function goToLogout() {
     navigate("/logout");
+    window.location.reload(false);
   }
   function goToSettings() {
     navigate("/settings");
