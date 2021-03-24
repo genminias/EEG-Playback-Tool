@@ -4,7 +4,7 @@
 
 ### **Project Goals**
 - Can record, store, and playback EEG data in a loop for analysis
-- Can share EEG data with other users / publicly
+<!-- - Can share EEG data with other users / publicly -->
 - Includes an analysis/metrics tool (TBD)
 
 ### **Project Approach / Technologies / API**
@@ -12,18 +12,19 @@
  - Javascript 
  - React
  - Node.js
- - EEG Javascript Library (TBD)
- - Neurocity APIs and SDK (TBD)
  - Firebase
+ - Chart.js
+ - Neurocity SDK and APIs (TBD)
+ - EEG Javascript Library (TBD)
 
 ### **Project Use Case**
-> A user will log into our app. Once logged in, a user can select a dataset from their already saved data. Once the dataset is loaded into our app, a user can play back the data on a loop and pause the play back for inspection. A user can also choose to look at a list of all of their saved data sets and share certain ones with other users or make them publicly available. Eventually, a user can also use an analysis tool to assist them in evaluating metrics.
+> A user will log into our app. Once logged in, a user can select a dataset from their already saved data. Once the dataset is loaded into our app, a user can play back the data on a loop and pause the play back for inspection. <!--A user can also choose to look at a list of all of their saved data sets and share certain ones with other users or make them publicly available.--> A user can also use an analysis tool to assist them in evaluating metrics.
+
 ### **Team Members** 
  - Matt Caputo 
  - Genevieve Minias 
  - Jacob Nelson 
  - Nehal Vora 
-
 
 ## Running Prototype
 - npm install @neurosity/notion dotenv
