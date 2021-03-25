@@ -16,15 +16,16 @@ export function Graph() {
         new Chart(ctx, {
             type: "line",
             labels: ["label1", "label2"],
-            data: [42, 69]
+            data: [42, 69],
+            options: {
+                maintainAspectRatio: false
+            }
         });
     });
 
     return(
         <div className="graph">
-            <canvas
-                id="myChart"
-            />
+            <canvas id="myChart" width="700" height="600" />
         </div>
     );
 }
