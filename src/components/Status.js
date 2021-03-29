@@ -1,3 +1,4 @@
+//This is Devices and Status combined to get rid of Devices page
 import React, { useState, useEffect } from "react";
 import { navigate } from "@reach/router";
 import { Link } from "@reach/router";
