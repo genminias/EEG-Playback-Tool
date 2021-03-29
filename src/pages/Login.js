@@ -8,9 +8,6 @@ import { Footer } from "../components/Footer";
 
 import { notion, useNotion } from "../services/notion";
 
-/**
- * Login page
- */
 export function Login() {
   const { user, lastSelectedDeviceId, setSelectedDevice } = useNotion();
   const [email, setEmail] = useState("");
@@ -43,7 +40,8 @@ export function Login() {
         if (lastSelectedDeviceId) {
           navigate("/");
         } else {
-          navigate("/devices");
+          navigate("/");
+          // navigate("/devices");
         }
       }
       setIsLoggingIn(false);
