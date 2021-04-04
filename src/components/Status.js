@@ -87,9 +87,9 @@ export function Status() {
             <span role="img" aria-label="My Devices">
             ⚙️
             </span>
-
             {/* This block of code from Devices.js */}
             <label>Select a Device </label> 
+          <div className="status-item select-devices">
             <select
               name="deviceSelect"
               value={draftDeviceId}
@@ -102,6 +102,10 @@ export function Status() {
                 </option>
               ))}
             </select>
+          </div>
+
+            
+
           {/* This block of code from Devices.js */}
 
 
