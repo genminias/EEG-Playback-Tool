@@ -23,14 +23,17 @@ export function Dashboard() {
 
       return (
         <main className="dashboard">
-          <Header />
-          <div className="dash-row">
-            <div className="dash-column">
-              <Recording /> 
-              {user ? <Nav /> : null}
-            </div>
-            <div className="dash-column">
-              <Graph />
+          <div className="dash-column">
+            <Header />
+            <div className="dash-row">
+              <div className="dash-column">
+                {/* <Header /> */}
+                <Recording /> 
+                {user ? <Nav /> : null}
+              </div>
+              <div className="dash-column">
+                <Graph />
+              </div>
             </div>
           </div>
         </main>
