@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Chart from "chart.js";
+import { render } from "react-dom";
 
 /**
  * Player component - UNDER CONSTRUCTION
  * Plays back pre-recorded EEG data
  */
 export function Player() {
+
+    useEffect(() => {
+        const ctx = document.getElementById("myChart");
+
+        new Chart(ctx, {
+            type: "line",
+            labels: ["label1", "label2"],
+            data: [42, 69],
+            options: {
+                maintainAspectRatio: false
+            }
+        });
+    });
+
+    return(
+        <div className="graph">
+            <canvas id="myChart" width="700" height="600" />
+        </div>
+    );
     // var ctx = document.getElementById("canvas").getContext("2d");
     // var eegGraph = new Chart(ctx).Line(data);
     // var data = {
