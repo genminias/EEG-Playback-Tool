@@ -6,9 +6,17 @@ import "firebase/firestore";
 
 export function Recording () {
     const { user } = useNotion();
+<<<<<<< Updated upstream
     // const [snapshot, setSnapshot] = useState([]);
     // const [recordingName, setRecordingName] = useState("");
 
+=======
+    const [recordingName, setRecordingName] = useState("");
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
+    const [recordingsInfo, setRecordingsInfo] = useState([]);
+    var eegDoc;
+>>>>>>> Stashed changes
     useEffect(() => {
         if (!user) {
           navigate("/login");
@@ -48,6 +56,27 @@ export function Recording () {
               memoryId: memoryId,
               formatType: "json"
             })
+<<<<<<< Updated upstream
+=======
+    } */
+
+    function onSubmit(event) {
+        event.preventDefault(); // do we want this to happen ?
+        for (var i = 0; i < recordingsInfo.length; i++) {
+            if (recordingName == recordingsInfo[i].name) {
+                console.log("found " + recordingsInfo[i].name + " " + recordingsInfo[i].json); //test
+                var xhr = new XMLHttpRequest();
+                xhr.responseType = 'json';
+                xhr.onload = (event) => {
+                     eegDoc = xhr.response;
+                    //console.log(typeof eegDoc); //test - object
+                   // console.log(eegDoc.channels); //test - this works it returns 8 !
+                };
+                xhr.open('GET', recordingsInfo[i].json);
+                xhr.send();
+            }
+        }
+>>>>>>> Stashed changes
     }
 
     return(
