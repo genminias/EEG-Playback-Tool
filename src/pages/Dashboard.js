@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { navigate } from "@reach/router";
 
 import { useNotion } from "../services/notion";
 import { Nav } from "../components/Nav";
 import { Header } from "../components/Header";
 import { Player } from "../components/Player";
-//import { Graph } from "../components/Graph"; /* this should be added straight to player */
 import { Recording } from "../components/Recording";
+
+export const eegContent = React.createContext({eegJsonInfo: null, setEegJsonInfo: () => {}});
+
 
 /**
  * Main page on app
@@ -14,6 +16,7 @@ import { Recording } from "../components/Recording";
  */
 export function Dashboard() {
     const { user } = useNotion();
+    const [eegJsonInfo, setEegJsonInfo] = useState(null);
 
     useEffect(() => {
         if (!user) {
@@ -24,15 +27,17 @@ export function Dashboard() {
       return (
         <main className="dashboard">
           <Header />
-          <div className="dash-row">
-            <div className="dash-column">
-              <Recording /> 
-              {user ? <Nav /> : null}
+          <eegContent.Provider value={{eegJsonInfo, setEegJsonInfo}}>
+            <div className="dash-row">
+              <div className="dash-column">
+                <Recording />
+                {user ? <Nav /> : null}
+              </div>
+              <div className="dash-column">
+                <Player />
+              </div>
             </div>
-            <div className="dash-column">
-              <Player />
-            </div>
-          </div>
+          </eegContent.Provider>
         </main>
       );
 }

@@ -1,15 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import Chart from "chart.js";
 import { render } from "react-dom";
+import { eegContent } from "../pages/Dashboard";
 
 /**
  * Player component - UNDER CONSTRUCTION
  * Plays back pre-recorded EEG data
  */
 export function Player() {
+    const { eegJsonInfo } = useContext(eegContent);
 
     useEffect(() => {
         const ctx = document.getElementById("myChart");
+        
+        console.log(typeof eegJsonInfo); //test - object
+        console.log(eegJsonInfo.channels); //test - error: cannot read property "channels" of null
 
         new Chart(ctx, {
             type: "line",
