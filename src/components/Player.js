@@ -14,7 +14,7 @@ export function Player() {
         const ctx = document.getElementById("myChart");
         
         console.log(typeof eegJsonInfo); //test - object
-        console.log(eegJsonInfo.channels); //test - error: cannot read property "channels" of null
+        console.log(eegJsonInfo.channels); //test - 8
 
         new Chart(ctx, {
             type: "line",

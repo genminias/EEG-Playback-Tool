@@ -16,7 +16,7 @@ export const eegContent = React.createContext({eegJsonInfo: null, setEegJsonInfo
  */
 export function Dashboard() {
     const { user } = useNotion();
-    const [eegJsonInfo, setEegJsonInfo] = useState(null);
+    const [eegJsonInfo, setEegJsonInfo] = useState(new Object);
 
     useEffect(() => {
         if (!user) {
