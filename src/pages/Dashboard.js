@@ -7,8 +7,8 @@ import { Header } from "../components/Header";
 import { Player } from "../components/Player";
 import { Recording } from "../components/Recording";
 
-export const eegContent = React.createContext({eegJsonInfo: null, setEegJsonInfo: () => {}});
-
+export const eegContent = React.createContext();
+// {eegSamples: null, setEegSamples: () => {}}
 
 /**
  * Main page on app
@@ -16,7 +16,8 @@ export const eegContent = React.createContext({eegJsonInfo: null, setEegJsonInfo
  */
 export function Dashboard() {
     const { user } = useNotion();
-    const [eegJsonInfo, setEegJsonInfo] = useState(new Object);
+    const [eegSamples, setEegSamples] = useState(new Object);
+    const [dataCheck, setDataCheck] = useState(false);
 
     useEffect(() => {
         if (!user) {
@@ -27,7 +28,7 @@ export function Dashboard() {
       return (
         <main className="dashboard">
           <Header />
-          <eegContent.Provider value={{eegJsonInfo, setEegJsonInfo}}>
+          <eegContent.Provider value={{value1: [eegSamples, dataCheck], value2: [setEegSamples, setDataCheck]}}>
             <div className="dash-row">
               <div className="dash-column">
                 <Recording />

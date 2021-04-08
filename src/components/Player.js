@@ -8,13 +8,28 @@ import { eegContent } from "../pages/Dashboard";
  * Plays back pre-recorded EEG data
  */
 export function Player() {
-    const { eegJsonInfo } = useContext(eegContent);
+    const { value1 } = useContext(eegContent);
+    const [eegSamples, dataCheck] = value1;
+    var channel1 = []; var channel2 = []; var channel3 = []; var channel4 = []; 
+    var channel5 = []; var channel6 = []; var channel7 = []; var channel8 = [];
+    const samplingRate = 250;
 
     useEffect(() => {
         const ctx = document.getElementById("myChart");
-        
-        console.log(typeof eegJsonInfo); //test - object
-        console.log(eegJsonInfo.channels); //test - 8
+
+        if (dataCheck == true) {
+            console.log("made it");
+            for (var i = 0; i < eegSamples.length; i++) {
+                channel1.push(eegSamples[i].data[0]);
+                channel2.push(eegSamples[i].data[1]);
+                channel3.push(eegSamples[i].data[2]);
+                channel4.push(eegSamples[i].data[3]);
+                channel5.push(eegSamples[i].data[4]);
+                channel6.push(eegSamples[i].data[5]);
+                channel7.push(eegSamples[i].data[6]);
+                channel8.push(eegSamples[i].data[7]);
+            }
+        }
 
         new Chart(ctx, {
             type: "line",
@@ -47,6 +62,10 @@ export function Player() {
     //         //... etc based on how many channels we have
     //     ]};
 
+}
+
+function parseData(sampleInfo) {
+    console.dir(sampleInfo[0]);
 }
 
 function readData() {
