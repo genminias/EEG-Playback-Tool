@@ -110,6 +110,13 @@ export function Player() {
                 boxWidth: 80,
                 fontColor: 'black'
             }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        display: true
+                    }
+                }]
             }
         };
         new Chart(ctx, {
@@ -125,10 +132,6 @@ export function Player() {
         </div>
     );
 
-}
-
-function parseData(sampleInfo) {
-    console.dir(sampleInfo[0]);
 }
 
 
