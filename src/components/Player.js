@@ -13,7 +13,7 @@ export function Player() {
     var channel1 = []; var channel2 = []; var channel3 = []; var channel4 = []; 
     var channel5 = []; var channel6 = []; var channel7 = []; var channel8 = [];
     var timestamps = [];
-    const samplingRate = 250;
+    //const samplingRate = 250;
     const sampleScale = 120;
 
     useEffect(() => {
@@ -121,9 +121,14 @@ export function Player() {
             scales: {
                 yAxes: [{
                     ticks: {
-                        display: true
+                        display: false
                     }
                 }]
+            },
+            elements: {
+                point: {
+                    radius: 0
+                }
             }
         };
         new Chart(ctx, {
@@ -134,8 +139,10 @@ export function Player() {
     });
 
     return(
-        <div className="graph">
-            <canvas id="myChart" width="15000" height="600" />
+        <div className="chartWrapper">
+            <div className="graph">
+                <canvas id="myChart" width="15000" height="600" />
+            </div>
         </div>
     );
 
