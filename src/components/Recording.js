@@ -90,23 +90,28 @@ export function Recording() {
         <main className="recordings-container">
             <form className="card recordings-form" onSubmit={onSubmit}>
                 {!!error ? <h4 className="card-error">{error}</h4> : null}
-                <div className="row">
-                    <select
-                        id="recordingSelect"
-                        value={recordingName}
-                        disabled={loading}
-                        onChange={(e) => setRecordingName(e.target.value)}
-                    >
-                        <option>Choose a recording</option>
-                    </select>
-                </div>
-                <div className="row">
-                    <button type="submit" className="card-button" disabled={loading}>
-                        {loading ? "Loading Recordings..." : "Select Recording"}
-                    </button>
-                    <button onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
+                <h3 className="card-heading">
+                    <span role="img" aria-label="My Recordings">
+                        ⚙️
+                    </span>
+                    <label>Select a Recording</label>
+                    <div className="status-item select-recording">
+                        <select
+                            id="recordingSelect"
+                            value={recordingName}
+                            disabled={loading}
+                            onChange={(e) => setRecordingName(e.target.value)}
+                        >
+                            <option>Select Recording</option>
+                        </select>
+                    </div>
+                </h3>
 
-                </div>
+                <button type="submit" className="card-btn" disabled={loading}>
+                    {loading ? "Loading Recordings..." : "Select Recording"}
+                </button>
+                <button type="submit" className="card-btn" disabled={loading} onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
+
             </form>
         </main>
         )

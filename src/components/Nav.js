@@ -21,6 +21,9 @@ export function Nav() {
   return (
     <nav className="card">
       <Status />
+      <button onClick={goToSettings} className="card-btn">
+        Settings
+      </button>
       <button onClick={goToLogout} className="card-btn">
         Logout
       </button>
@@ -33,9 +36,6 @@ export function Nav() {
       <button onClick={status component} className="card-btn">
         Status
       </button>*/}
-      <button onClick={goToSettings} className="card-btn">
-        Settings
-      </button>
       <Footer />
     </nav>
   );

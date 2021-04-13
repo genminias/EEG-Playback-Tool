@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { navigate } from "@reach/router";
 import { Link } from "@reach/router";
 
-import { useNotion } from "../services/notion";
+import { notion, useNotion } from "../services/notion";
 
-/**
- * Displays status of currently selected Neurosity device
- * Used in dashboard card
- */
 const statesLabels = {
   booting: "Starting OS...",
   shuttingOff: "Shutting off...",
@@ -26,6 +23,58 @@ const stateColors = {
 export function Status() {
   const { status, selectedDevice } = useNotion();
   const { state, charging, battery, sleepMode } = status || {};
+  const { user, lastSelectedDeviceId } = useNotion();
+  const [devices, setDevices] = useState([]);                   //from Devices.js
+  const [draftDeviceId, setDraftDeviceId] = useState("");       //from Devices.js
+  const [loading, setLoading] = useState(true);                 //from Devices.js
+  const [submitting, setSubmitting] = useState(false);          //from Devices.js
+  const [error, setError] = useState("");                       //from Devices.js
+
+  // This block of code from Devices.js
+  useEffect(() => {
+    if (!user || submitting) {
+      return;
+    }
+
+    setLoading(true);
+
+    notion
+      .getDevices()
+      .then((devices) => {
+        setDevices(devices);
+        if (devices.length) {
+          setDraftDeviceId(
+            lastSelectedDeviceId
+              ? lastSelectedDeviceId
+              : devices[0].deviceId
+          );
+        }
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [user, lastSelectedDeviceId, submitting]);
+
+  function onSubmit(event) {
+    event.preventDefault();
+    setSubmitting(true);
+
+    notion
+      .selectDevice((devices) =>
+        devices.find((device) => device.deviceId === draftDeviceId)
+      )
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  }
+  // This block of code from Devices.js
+
 
   if (!status) {
     return <div>Connecting to device...</div>;
@@ -35,17 +84,37 @@ export function Status() {
     <aside>
       {selectedDevice ? (
         <h3 className="card-heading">
-          <Link
-            to="/devices"
-            title="My Devices"
-            className="unstyled-link"
-          >
-            <span role="img" aria-label="My Devices">
-              ⚙️
+          <span role="img" aria-label="My Devices">
+            ⚙️
             </span>
-            &nbsp;&nbsp;
-            {selectedDevice.deviceNickname}
-          </Link>
+          {/* This block of code from Devices.js */}
+          <label>Select a Device </label>
+          <div className="status-item select-devices">
+            <select
+              name="deviceSelect"
+              value={draftDeviceId}
+              disabled={loading}
+              onChange={(e) => setDraftDeviceId(e.target.value)}
+            >
+              {devices.map((device) => (
+                <option key={device.deviceId} value={device.deviceId}>
+                  {device.deviceNickname || device.modelName}
+                </option>
+              ))}
+            </select>
+          </div>
+
+
+
+          {/* This block of code from Devices.js */}
+
+
+
+
+
+          {/* &nbsp;&nbsp;
+            {selectedDevice.deviceNickname} */}
+          {/* </Link> */}
         </h3>
       ) : null}
       <div className="status-item status-state">

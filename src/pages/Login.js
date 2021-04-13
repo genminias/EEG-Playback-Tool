@@ -43,7 +43,7 @@ export function Login() {
         if (lastSelectedDeviceId) {
           navigate("/");
         } else {
-          navigate("/devices");
+          navigate("/");
         }
       }
       setIsLoggingIn(false);
