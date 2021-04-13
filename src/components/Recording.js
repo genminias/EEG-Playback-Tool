@@ -1,25 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { navigate } from "@reach/router";
 
 import { notion, useNotion } from "../services/notion";
 import "firebase/firestore";
+//import { contextBridge } from 'electron';
+import { eegContent } from "../pages/Dashboard";
 
 /**
  * Displays a user's recordings
  * A user can select a recording for use in our playback tool
  */
-export function Recording () {
+export function Recording() {
     const { user } = useNotion();
     const [recordingName, setRecordingName] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     const [recordingsInfo, setRecordingsInfo] = useState([]);
+    const { value2 } = useContext(eegContent);
+    const [setEegSamples, setDataCheck] = value2;
 
     useEffect(() => {
         if (!user) {
             navigate("/login");
         }
 
+        setDataCheck(false); //make sure this is in the right place
         setLoading(true);
         getMemories();
         setLoading(false);
@@ -69,8 +74,11 @@ export function Recording () {
                 xhr.responseType = 'json';
                 xhr.onload = (event) => {
                     var eegDoc = xhr.response;
+                    setEegSamples(eegDoc.samples);
+                    setDataCheck(true);
                     console.log(typeof eegDoc); //test - object
                     console.log(eegDoc.channels); //test - this works it returns 8 !
+                    console.log(eegDoc.samples[0].data[0]); //test
                 };
                 xhr.open('GET', recordingsInfo[i].json);
                 xhr.send();
