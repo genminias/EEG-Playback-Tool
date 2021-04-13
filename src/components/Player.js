@@ -10,7 +10,7 @@ import { eegContent } from "../pages/Dashboard";
 export function Player() {
     const { value1 } = useContext(eegContent);
     const [eegSamples, dataCheck] = value1;
-    var channel1 = []; var channel2 = []; var channel3 = []; var channel4 = []; 
+    var channel1 = []; var channel2 = []; var channel3 = []; var channel4 = [];
     var channel5 = []; var channel6 = []; var channel7 = []; var channel8 = [];
     var timestamps = [];
     const samplingRate = 250;
@@ -40,7 +40,7 @@ export function Player() {
             lineTension: 0,
             fill: false,
             borderColor: 'red'
-            };
+        };
 
         var graphChannel2 = {
             label: "Channel 2",
@@ -48,7 +48,7 @@ export function Player() {
             lineTension: 0,
             fill: false,
             borderColor: 'blue'
-            };
+        };
 
         var graphChannel3 = {
             label: "Channel 3",
@@ -100,16 +100,23 @@ export function Player() {
 
         var eegGraphData = {
             labels: timestamps,
-            datasets: [graphChannel1, graphChannel2,graphChannel3,graphChannel4,graphChannel5,graphChannel6,graphChannel7,graphChannel8]
+            datasets: [graphChannel1, graphChannel2, graphChannel3, graphChannel4, graphChannel5, graphChannel6, graphChannel7, graphChannel8]
         };
         var chartOptions = {
             legend: {
                 display: true,
                 position: 'top',
                 labels: {
-                boxWidth: 80,
-                fontColor: 'black'
-            }
+                    boxWidth: 80,
+                    fontColor: 'black'
+                }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        display: true
+                    }
+                }]
             }
         };
         new Chart(ctx, {
@@ -119,16 +126,12 @@ export function Player() {
         });
     });
 
-    return(
+    return (
         <div className="graph">
             <canvas id="myChart" width="15000" height="600" />
         </div>
     );
 
-}
-
-function parseData(sampleInfo) {
-    console.dir(sampleInfo[0]);
 }
 
 
