@@ -9,7 +9,7 @@ export function Header() {
         <div className="title">
             <div className="dash-row">
                 <img src="src/components/logo.jpg" ></img>
-                <h1> EEG Playback Tool</h1>
+                <h1>Brainwave</h1>
             </div>
         </div>
     );
