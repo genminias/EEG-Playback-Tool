@@ -10,10 +10,10 @@ import { eegContent } from "../pages/Dashboard";
 export function Player() {
     const { value1 } = useContext(eegContent);
     const [eegSamples, dataCheck] = value1;
-    var channel1 = []; var channel2 = []; var channel3 = []; var channel4 = []; 
+    var channel1 = []; var channel2 = []; var channel3 = []; var channel4 = [];
     var channel5 = []; var channel6 = []; var channel7 = []; var channel8 = [];
     var timestamps = [];
-    const samplingRate = 250;
+    //const samplingRate = 250;
     const sampleScale = 120;
 
     useEffect(() => {
@@ -34,7 +34,7 @@ export function Player() {
                     timestamps.push(0);
                 }
                 else {
-                    timestamps.push((eegSamples[i].timestamp - eegSamples[i-1].timestamp) + timestamps[i-1]);
+                    timestamps.push((eegSamples[i].timestamp - eegSamples[i - 1].timestamp) + timestamps[i - 1]);
                 }
             }
             console.log(timestamps); //test
@@ -46,7 +46,7 @@ export function Player() {
             lineTension: 0,
             fill: false,
             borderColor: 'red'
-            };
+        };
 
         var graphChannel2 = {
             label: "Channel 2",
@@ -54,7 +54,7 @@ export function Player() {
             lineTension: 0,
             fill: false,
             borderColor: 'blue'
-            };
+        };
 
         var graphChannel3 = {
             label: "Channel 3",
@@ -106,7 +106,7 @@ export function Player() {
 
         var eegGraphData = {
             labels: timestamps,
-            datasets: [graphChannel1, graphChannel2,graphChannel3,graphChannel4,graphChannel5,graphChannel6,graphChannel7,graphChannel8]
+            datasets: [graphChannel1, graphChannel2, graphChannel3, graphChannel4, graphChannel5, graphChannel6, graphChannel7, graphChannel8]
         };
 
         var chartOptions = {
@@ -121,9 +121,14 @@ export function Player() {
             scales: {
                 yAxes: [{
                     ticks: {
-                        display: true
+                        display: false
                     }
                 }]
+            },
+            elements: {
+                point: {
+                    radius: 0
+                }
             }
         };
         new Chart(ctx, {
@@ -133,9 +138,11 @@ export function Player() {
         });
     });
 
-    return(
-        <div className="graph">
-            <canvas id="myChart" width="15000" height="600" />
+    return (
+        <div className="chartWrapper">
+            <div className="graph">
+                <canvas id="myChart" width="15000" height="600" />
+            </div>
         </div>
     );
 
