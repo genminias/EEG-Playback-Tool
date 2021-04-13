@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { navigate } from "@reach/router";
 
 import { useNotion } from "../services/notion";
@@ -25,21 +25,37 @@ export function Dashboard() {
       }, [user]);
 
       return (
+        // <main className="dashboard">
+        //   <div className="dash-column">
+        //   <Header />
+        //   <eegContent.Provider value={{ value1: [eegSamples, dataCheck], value2: [setEegSamples, setDataCheck] }}>
+
+        //     <div className="dash-row">
+        //       <div className="dash-column">
+        //         {/* <Header /> */}
+        //         <Recording /> 
+        //         {user ? <Nav /> : null}
+        //       </div>
+        //       <div className="dash-column">
+        //         <Player />
+        //       </div>
+        //     </div>
+        //   </eegContent.Provider>
+
+        //   </div>
+        // </main>
         <main className="dashboard">
+          <Header />
           <eegContent.Provider value={{ value1: [eegSamples, dataCheck], value2: [setEegSamples, setDataCheck] }}>
-          <div className="dash-column">
-            <Header />
             <div className="dash-row">
               <div className="dash-column">
-                {/* <Header /> */}
-                <Recording /> 
+                <Recording />
                 {user ? <Nav /> : null}
               </div>
               <div className="dash-column">
                 <Player />
               </div>
             </div>
-          </div>
           </eegContent.Provider>
         </main>
       );
