@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Router, navigate } from "@reach/router";
 
 import { ProvideNotion } from "./services/notion";
+// import { Devices } from "./pages/Devices";
 import { Loading } from "./components/Loading";
 import { Login } from "./pages/Login";
 import { Logout } from "./pages/Logout";
@@ -41,6 +42,7 @@ function Routes() {
     <Router>
       <Dashboard path="/" />
       <Analysis path="/analysis" />
+      {/* <Devices path="/devices" /> */}
       <Login path="/login" />
       <Logout path="/logout" />
       <Settings path="/settings" />

@@ -7,12 +7,13 @@ import { Header } from "../components/Header";
 import { Player } from "../components/Player";
 import { Recording } from "../components/Recording";
 
+export const eegContent = React.createContext();
+// {eegSamples: null, setEegSamples: () => {}}
+
 /**
  * Main page on app
  * Displays a user's recordings, device status, and the EEG playback tool/graph
  */
-export const eegContent = React.createContext();
-
 export function Dashboard() {
     const { user } = useNotion();
     const [eegSamples, setEegSamples] = useState(new Object);
@@ -25,28 +26,9 @@ export function Dashboard() {
       }, [user]);
 
       return (
-        // <main className="dashboard">
-        //   <div className="dash-column">
-        //   <Header />
-        //   <eegContent.Provider value={{ value1: [eegSamples, dataCheck], value2: [setEegSamples, setDataCheck] }}>
-
-        //     <div className="dash-row">
-        //       <div className="dash-column">
-        //         {/* <Header /> */}
-        //         <Recording /> 
-        //         {user ? <Nav /> : null}
-        //       </div>
-        //       <div className="dash-column">
-        //         <Player />
-        //       </div>
-        //     </div>
-        //   </eegContent.Provider>
-
-        //   </div>
-        // </main>
         <main className="dashboard">
           <Header />
-          <eegContent.Provider value={{ value1: [eegSamples, dataCheck], value2: [setEegSamples, setDataCheck] }}>
+          <eegContent.Provider value={{value1: [eegSamples, dataCheck], value2: [setEegSamples, setDataCheck]}}>
             <div className="dash-row">
               <div className="dash-column">
                 <Recording />

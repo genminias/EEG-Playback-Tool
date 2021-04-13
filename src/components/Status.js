@@ -84,11 +84,11 @@ export function Status() {
     <aside>
       {selectedDevice ? (
         <h3 className="card-heading">
-            <span role="img" aria-label="My Devices">
+          <span role="img" aria-label="My Devices">
             ⚙️
             </span>
-            {/* This block of code from Devices.js */}
-            <label>Select a Device </label> 
+          {/* This block of code from Devices.js */}
+          <label>Select a Device </label>
           <div className="status-item select-devices">
             <select
               name="deviceSelect"
@@ -104,15 +104,15 @@ export function Status() {
             </select>
           </div>
 
-            
+
 
           {/* This block of code from Devices.js */}
 
 
 
 
-           
-            {/* &nbsp;&nbsp;
+
+          {/* &nbsp;&nbsp;
             {selectedDevice.deviceNickname} */}
           {/* </Link> */}
         </h3>

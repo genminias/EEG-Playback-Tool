@@ -107,10 +107,10 @@ export function Recording() {
                     </div>
                 </h3>
 
-                        <button type="submit" className="card-btn" disabled={loading}>
-                            {loading ? "Loading Recordings..." : "Select Recording"}
-                        </button>
-                        <button type="submit" className="card-btn" disabled={loading} onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
+                <button type="submit" className="card-btn" disabled={loading}>
+                    {loading ? "Loading Recordings..." : "Select Recording"}
+                </button>
+                <button type="submit" className="card-btn" disabled={loading} onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
 
             </form>
         </main>
