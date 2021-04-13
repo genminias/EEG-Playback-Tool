@@ -47,7 +47,7 @@ export function Player() {
             data: channel2,
             lineTension: 0,
             fill: false,
-            borderColor: 'red'
+            borderColor: 'blue'
             };
 
         var graphChannel3 = {
@@ -55,7 +55,7 @@ export function Player() {
             data: channel3,
             lineTension: 0,
             fill: false,
-            borderColor: 'red'
+            borderColor: 'yellow'
         };
 
         var graphChannel4 = {
@@ -63,7 +63,7 @@ export function Player() {
             data: channel4,
             lineTension: 0,
             fill: false,
-            borderColor: 'red'
+            borderColor: 'purple'
         };
 
         var graphChannel5 = {
@@ -71,7 +71,7 @@ export function Player() {
             data: channel5,
             lineTension: 0,
             fill: false,
-            borderColor: 'red'
+            borderColor: 'orange'
         };
 
         var graphChannel6 = {
@@ -79,7 +79,7 @@ export function Player() {
             data: channel6,
             lineTension: 0,
             fill: false,
-            borderColor: 'red'
+            borderColor: 'green'
         };
 
         var graphChannel7 = {
@@ -87,7 +87,7 @@ export function Player() {
             data: channel7,
             lineTension: 0,
             fill: false,
-            borderColor: 'red'
+            borderColor: 'navy'
         };
 
         var graphChannel8 = {
@@ -95,7 +95,7 @@ export function Player() {
             data: channel8,
             lineTension: 0,
             fill: false,
-            borderColor: 'red'
+            borderColor: 'pink'
         };
 
         var eegGraphData = {
@@ -121,7 +121,7 @@ export function Player() {
 
     return(
         <div className="graph">
-            <canvas id="myChart" width="700" height="600" />
+            <canvas id="myChart" width="15000" height="600" />
         </div>
     );
     // var ctx = document.getElementById("canvas").getContext("2d");
