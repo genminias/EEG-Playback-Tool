@@ -5,15 +5,18 @@ import { useNotion } from "../services/notion";
 import { Nav } from "../components/Nav";
 import { Header } from "../components/Header";
 import { Player } from "../components/Player";
-//import { Graph } from "../components/Graph"; /* this should be added straight to player */
 import { Recording } from "../components/Recording";
 
 /**
  * Main page on app
  * Displays a user's recordings, device status, and the EEG playback tool/graph
  */
+export const eegContent = React.createContext();
+
 export function Dashboard() {
     const { user } = useNotion();
+    const [eegSamples, setEegSamples] = useState(new Object);
+    const [dataCheck, setDataCheck] = useState(false);
 
     useEffect(() => {
         if (!user) {
@@ -23,6 +26,7 @@ export function Dashboard() {
 
       return (
         <main className="dashboard">
+          <eegContent.Provider value={{ value1: [eegSamples, dataCheck], value2: [setEegSamples, setDataCheck] }}>
           <div className="dash-column">
             <Header />
             <div className="dash-row">
@@ -32,10 +36,11 @@ export function Dashboard() {
                 {user ? <Nav /> : null}
               </div>
               <div className="dash-column">
-                <Graph />
+                <Player />
               </div>
             </div>
           </div>
+          </eegContent.Provider>
         </main>
       );
 }
