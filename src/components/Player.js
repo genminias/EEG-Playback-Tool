@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import Chart from "chart.js";
+import Highcharts from 'highcharts';
 import { render } from "react-dom";
 import { eegContent } from "../pages/Dashboard";
 
@@ -14,7 +14,7 @@ export function Player() {
     var channel5 = []; var channel6 = []; var channel7 = []; var channel8 = [];
     var timestamps = [];
     //const samplingRate = 250;
-    const sampleScale = 120;
+    const sampleScale = 180;
 
     useEffect(() => {
         const ctx = document.getElementById("myChart");
@@ -29,7 +29,7 @@ export function Player() {
                 channel5.push(+eegSamples[i].data[4] + (sampleScale * 3));
                 channel6.push(+eegSamples[i].data[5] + (sampleScale * 2));
                 channel7.push(+eegSamples[i].data[6] + sampleScale);
-                channel8.push(+eegSamples[i].data[7]);
+                channel8.push(+eegSamples[i].data[7] + 60 );
                 if (i == 0) {
                     timestamps.push(0);
                 }
@@ -109,39 +109,189 @@ export function Player() {
             datasets: [graphChannel1, graphChannel2, graphChannel3, graphChannel4, graphChannel5, graphChannel6, graphChannel7, graphChannel8]
         };
 
-        var chartOptions = {
-            legend: {
-                display: true,
-                position: 'top',
-                labels: {
-                    boxWidth: 80,
-                    fontColor: 'black'
-                },
+        var maximum = channel1.length / 275;  
+ 
+
+        var removeSVG = function(rem) {
+            rem.element.remove();
+        };
+
+        var a = function(x, y) {
+            console.log("x,y in timeout--", x, y);
+            var rem = chart.renderer.rect(y, x, 100, 5, 10).attr({
+              fill: 'red',
+              stroke: 'black',
+              'stroke-width': 2
+            }).add();
+         
+            var timeId = window.setTimeout(function() {
+              removeSVG(rem)
+            }, 100);
+         
+        };
+
+        var animation = function() {
+
+            let loc = chart.series[0].points;
+         
+            for (let i = 0; i < loc.length; i++) {
+         
+              var x = loc[i].plotX;
+              var y = loc[i].plotY;
+              timeout(i, x, y);
+         
+         
+            }
+         
+        };
+
+        var timeout = function(i, x, y) {
+            window.setTimeout(function() {
+              a(x, y);
+            }, i * 100);
+          }
+
+        var chart = Highcharts.chart('container', {
+            chart: {
+              type: 'line',
+              inverted: 'true',
+              events: {
+                  load: function () {
+                   var chart = this;
+                   console.log("hello dfgbhnj");
+                 var myInt = setInterval(function () {
+                 
+                 if (channel1.length) {
+                     chart.series[0].addPoint(channel1.shift(), false, false, false);
+                     chart.series[1].addPoint(channel2.shift(), false, false, false);
+                     chart.series[2].addPoint(channel3.shift(), false, false, false);
+                     chart.series[3].addPoint(channel4.shift(), false, false, false);
+                     chart.series[4].addPoint(channel5.shift(), false, false, false);
+                     chart.series[5].addPoint(channel6.shift(), false, false, false);
+                     chart.series[6].addPoint(channel7.shift(), false, false, false);
+                     chart.series[7].addPoint(channel8.shift(), false, false, false);
+
+
+                   var len = chart.series[0].data.length;
+                   if (len > maximum) {
+                           chart.xAxis[0].setExtremes(
+                           len - maximum,
+                           len
+                       );
+                   }
+                   
+                   chart.redraw();
+                   
+                   } else {
+                       clearInterval(myInt);
+                   }
+                 }, 200)
+                 
+               }
+              }
             },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        display: false
+            title: {
+              text: 'Demo to show revenue'
+            },
+            subtitle: {
+              text: 'Demo'
+            },
+            xAxis: [{
+                 max: maximum,
+              
+              reversed: false, // change direction of animation
+              labels: {
+                step: 1
+              }
+            }, { // mirror axis on right side
+              opposite: true,
+              
+              linkedTo: 0,
+              labels: {
+                step: 1
+              }
+            }],
+            yAxis: {
+              title: {
+                text: null
+              },
+              _labels: {
+                formatter: function() {
+                  return Math.abs(this.value);
+                }
+              }
+            },
+         
+            plotOptions: {
+              series: {
+                stacking: false
+              }
+            },
+         
+            tooltip: {
+              formatter: function() {
+                return '<b>' + this.series.name + ' revenue on ' + this.point.category + '</b><br/>' +
+                  'Total: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
+              }
+            },
+         
+            series: [{
+              name: 'Channel 1',
+              data: []
+            }, {
+              name: 'Channel 2',
+              data: []
+            },{
+                name: 'Channel 3',
+                data: []
+              },{
+                name: 'Channel 4',
+                data: []
+              },{
+                name: 'Channel 5',
+                data: []
+              },{
+                name: 'Channel 6',
+                data: []
+              },{
+                name: 'Channel 7',
+                data: []
+              },{
+                name: 'Channel 8',
+                data: []
+              }],
+
+              
+
+              responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
                     }
                 }]
-            },
-            elements: {
-                point: {
-                    radius: 0
-                }
             }
-        };
-        new Chart(ctx, {
-            type: "line",
-            data: eegGraphData,
-            options: chartOptions
-        });
+         
+         
+          });
+          animation();
     });
-
+const styles = {
+    minWidth: "1010px",
+    maxWidth: "1500px",
+    height: "1100px",
+    margin: "0 auto"
+};
     return (
         <div className="chartWrapper">
             <div className="graph">
-                <canvas id="myChart" width="15000" height="600" />
+                <div id="container" style={styles} />
             </div>
         </div>
     );

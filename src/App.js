@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Router, navigate } from "@reach/router";
+import Highcharts from 'highcharts';
+
 
 import { ProvideNotion } from "./services/notion";
 // import { Devices } from "./pages/Devices";
