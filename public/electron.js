@@ -1,7 +1,7 @@
 const electron = require('electron'),
   app = electron.app,
   BrowserWindow = electron.BrowserWindow;
-   
+
 const path = require('path'),
   isDev = require('electron-is-dev');
    
@@ -13,6 +13,8 @@ const createWindow = () => {
     `file://${path.join(__dirname, '../build/index.html')}`
   mainWindow.loadURL(appUrl)
   mainWindow.maximize()
+  mainWindow.$ = mainWindow.jQuery = require('jquery');
+  console.log( [$, jQuery ]);
   mainWindow.setFullScreen(false)
   mainWindow.on('closed', () => mainWindow = null)
 }
