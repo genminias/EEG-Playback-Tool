@@ -6,7 +6,8 @@ import React from "react";
  */
 const styles = {
     fontSize: "64px",
-    color: "#231e50",
+    // color: "#231e50",
+    // fontFamily: "Fira Sans"
     // flexDirection:'row',
     // textAlign: "center",
     // justifyContent: 'center',
