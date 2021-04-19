@@ -185,7 +185,7 @@ export function Player() {
                    } else {
                        clearInterval(myInt);
                    }
-                 }, 250)
+                 }, 50)
                  
                }
               }
@@ -204,7 +204,7 @@ export function Player() {
             }, { // mirror axis on right side
               opposite: true,
               type: 'datetime',
-              //tickPixelInterval:5,
+              //tickPixelInterval:50,
               linkedTo: 0,
               labels: {
                 step: .5
