@@ -162,14 +162,14 @@ export function Player() {
                  var myInt = setInterval(function () {
                  
                  if (channel1.length) {
-                     chart.series[0].addPoint(channel1.shift(), false, false, false);
-                     chart.series[1].addPoint(channel2.shift(), false, false, false);
-                     chart.series[2].addPoint(channel3.shift(), false, false, false);
-                     chart.series[3].addPoint(channel4.shift(), false, false, false);
-                     chart.series[4].addPoint(channel5.shift(), false, false, false);
-                     chart.series[5].addPoint(channel6.shift(), false, false, false);
-                     chart.series[6].addPoint(channel7.shift(), false, false, false);
-                     chart.series[7].addPoint(channel8.shift(), false, false, false);
+                     chart.series[0].addPoint(channel1.shift(), true, false, false);
+                     chart.series[1].addPoint(channel2.shift(), true, false, false);
+                     chart.series[2].addPoint(channel3.shift(), true, false, false);
+                     chart.series[3].addPoint(channel4.shift(), true, false, false);
+                     chart.series[4].addPoint(channel5.shift(), true, false, false);
+                     chart.series[5].addPoint(channel6.shift(), true, false, false);
+                     chart.series[6].addPoint(channel7.shift(), true, false, false);
+                     chart.series[7].addPoint(channel8.shift(), true, false, false);
 
 
                    var len = chart.series[0].data.length;
@@ -185,31 +185,31 @@ export function Player() {
                    } else {
                        clearInterval(myInt);
                    }
-                 }, 200)
+                 }, 250)
                  
                }
               }
             },
             title: {
-              text: 'Demo to show revenue'
-            },
-            subtitle: {
-              text: 'Demo'
+              text: 'EEG Data'
             },
             xAxis: [{
                  max: maximum,
-              
+                 type: 'datetime',
+                 //tickPixelInterval:5,
               reversed: false, // change direction of animation
               labels: {
-                step: 1
+                step: .5
               }
             }, { // mirror axis on right side
               opposite: true,
-              
+              type: 'datetime',
+              //tickPixelInterval:5,
               linkedTo: 0,
               labels: {
-                step: 1
-              }
+                step: .5
+              },
+              
             }],
             yAxis: {
               title: {
@@ -224,7 +224,11 @@ export function Player() {
          
             plotOptions: {
               series: {
-                stacking: false
+                turboThreshold: 1,
+                stacking: false,
+                // animation: {
+                //   duration: 1
+                // }
               }
             },
          
@@ -236,27 +240,35 @@ export function Player() {
             },
          
             series: [{
+              boostThreshold: 1,
               name: 'Channel 1',
               data: []
             }, {
+              boostThreshold: 1,
               name: 'Channel 2',
               data: []
             },{
+              boostThreshold: 1,
                 name: 'Channel 3',
                 data: []
               },{
+                boostThreshold: 1,
                 name: 'Channel 4',
                 data: []
               },{
+                boostThreshold: 1,
                 name: 'Channel 5',
                 data: []
               },{
+                boostThreshold: 1,
                 name: 'Channel 6',
                 data: []
               },{
+                boostThreshold: 1,
                 name: 'Channel 7',
                 data: []
               },{
+                boostThreshold: 1,
                 name: 'Channel 8',
                 data: []
               }],
