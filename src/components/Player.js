@@ -14,7 +14,7 @@ export function Player() {
     var channel5 = []; var channel6 = []; var channel7 = []; var channel8 = [];
     var timestamps = [];
     //const samplingRate = 250;
-    const sampleScale = 180;
+    const sampleScale = 110;
 
     useEffect(() => {
         const ctx = document.getElementById("myChart");
@@ -30,7 +30,7 @@ export function Player() {
                 channel5.push(+eegSamples[i].data[4] + (sampleScale * 3));
                 channel6.push(+eegSamples[i].data[5] + (sampleScale * 2));
                 channel7.push(+eegSamples[i].data[6] + sampleScale);
-                channel8.push(+eegSamples[i].data[7] + 60 );
+                channel8.push(+eegSamples[i].data[7] + 10 );
                 if (i == 0) {
                     timestamps.push(0);
                 }
@@ -281,9 +281,9 @@ export function Player() {
                     },
                     chartOptions: {
                         legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
+                            layout: 'vertical',
+                            align: 'right',
+                            verticalAlign: 'center'
                         }
                     }
                 }]
@@ -294,8 +294,8 @@ export function Player() {
     });
 const styles = {
     minWidth: "900px",
-    maxWidth: "900px",
-    height: "1000px",
+    maxWidth: "1000px",
+    height: "1200px",
     margin: "0 auto"
 };
     return (
