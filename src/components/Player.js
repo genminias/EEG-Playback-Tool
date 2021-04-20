@@ -18,6 +18,7 @@ export function Player() {
 
     useEffect(() => {
         const ctx = document.getElementById("myChart");
+        
 
         if (dataCheck === true) {
             console.log("made it"); //test
@@ -140,10 +141,15 @@ export function Player() {
 
     return (
         <div className="chartWrapper">
-            <div className="graph">
-                <canvas id="myChart" width="15000" height="600" />
+            <div className="chartAreaWrapper">
+                <div className="chartAreaWrapper2">
+                <canvas id="myChart" width="1200" height="600" >
+                </canvas>
             </div>
+            </div>
+            <canvas id="axis-Test" height="300" width="0"></canvas>
         </div>
+        
     );
 
 }
