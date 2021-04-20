@@ -30,6 +30,7 @@
 - npm install @neurosity/notion dotenv
 - npm install @reach/router
 - npm install highchart
+- npm install react-highcharts
 <!-- - npm install react-native-wheel-scroll-picker --save
 - npm i electron-is-dev
 - npm i -D concurrently electron electron-builder wait-on cross-env -->
