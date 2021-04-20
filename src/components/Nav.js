@@ -27,15 +27,6 @@ export function Nav() {
       <button onClick={goToLogout} className="card-btn">
         Logout
       </button>
-      {/* <button onClick={analysis} className="card-btn">
-        Analysis
-      </button>
-      <button onClick={hyperlink to dev console} className="card-btn">
-        Dev Console
-      </button>
-      <button onClick={status component} className="card-btn">
-        Status
-      </button>*/}
       <Footer />
     </nav>
   );

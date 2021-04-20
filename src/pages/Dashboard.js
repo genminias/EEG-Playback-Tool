@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { navigate } from "@reach/router";
-import Highcharts from 'highcharts';
 
 import { useNotion } from "../services/notion";
 import { Nav } from "../components/Nav";
@@ -9,7 +8,6 @@ import { Player } from "../components/Player";
 import { Recording } from "../components/Recording";
 
 export const eegContent = React.createContext();
-// {eegSamples: null, setEegSamples: () => {}}
 
 /**
  * Main page on app

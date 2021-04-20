@@ -7,15 +7,8 @@ import React from "react";
 const styles = {
     fontSize: "48px",
     color: "#231e50",
-    // flexDirection:'row',
-    // textAlign: "center",
-    // justifyContent: 'center',
-    // alignItems: 'baseline'
-    // display: 'baseline'
     margin: 1,
     padding: "50px"
-
-    // alignSelf: "stretch"
 };
 
 export function Header() {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { navigate } from "@reach/router";
-import { Link } from "@reach/router";
 
 import { notion, useNotion } from "../services/notion";
 
@@ -20,6 +19,11 @@ const stateColors = {
   offline: "crimson"
 };
 
+
+/**
+ * Devices component
+ * Allows for the selection of a user's Neurosity devices
+ */
 export function Status() {
   const { status, selectedDevice } = useNotion();
   const { state, charging, battery, sleepMode } = status || {};
@@ -103,18 +107,7 @@ export function Status() {
               ))}
             </select>
           </div>
-
-
-
           {/* This block of code from Devices.js */}
-
-
-
-
-
-          {/* &nbsp;&nbsp;
-            {selectedDevice.deviceNickname} */}
-          {/* </Link> */}
         </h3>
       ) : null}
       <div className="status-item status-state">

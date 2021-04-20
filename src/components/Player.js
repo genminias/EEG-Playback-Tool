@@ -4,7 +4,7 @@ import { render } from "react-dom";
 import { eegContent } from "../pages/Dashboard";
 
 /**
- * Player component - UNDER CONSTRUCTION
+ * Player component
  * Plays back pre-recorded EEG data
  */
 export function Player() {
@@ -13,15 +13,12 @@ export function Player() {
     var channel1 = []; var channel2 = []; var channel3 = []; var channel4 = [];
     var channel5 = []; var channel6 = []; var channel7 = []; var channel8 = [];
     var timestamps = [];
-    //const samplingRate = 250;
     const sampleScale = 110;
 
     useEffect(() => {
         const ctx = document.getElementById("myChart"); 
         
-
         if (dataCheck === true) {
-            console.log("made it"); //test
             for (var i = 0; i < eegSamples.length; i++) { // creation of data channels for different brainwaves
                 channel1.push(+eegSamples[i].data[0] + (sampleScale * 7));
                 channel2.push(+eegSamples[i].data[1] + (sampleScale * 6));
@@ -38,7 +35,6 @@ export function Player() {
                     timestamps.push((eegSamples[i].timestamp - eegSamples[i - 1].timestamp) + timestamps[i - 1]);
                 }
             }
-            console.log(timestamps); //test
         }
 
         var graphChannel1 = {
@@ -112,7 +108,6 @@ export function Player() {
 
         var maximum = channel1.length / 275; // elements shown on chart at once
 
-
         var removeSVG = function(rem) { //remove element from chart 
             rem.element.remove();
         };
@@ -128,29 +123,22 @@ export function Player() {
             var timeId = window.setTimeout(function() {
               removeSVG(rem)
             }, 100);
-
         };
 
         var animation = function() { //chart animation
-
             let loc = chart.series[0].points;
-
             for (let i = 0; i < loc.length; i++) {
-
               var x = loc[i].plotX;
               var y = loc[i].plotY;
               timeout(i, x, y);
-
-
             }
-
         };
 
         var timeout = function(i, x, y) { //timeout function
             window.setTimeout(function() {
               a(x, y);
             }, i * 100);
-          }
+        }
 
         var chart = Highcharts.chart('container', { //chart creation
             chart: {
@@ -171,7 +159,6 @@ export function Player() {
                      chart.series[6].addPoint(channel7.shift(), true, false, false);
                      chart.series[7].addPoint(channel8.shift(), true, false, false);
 
-
                    var len = chart.series[0].data.length;
                    if (len > maximum) {
                            chart.xAxis[0].setExtremes(
@@ -186,7 +173,6 @@ export function Player() {
                        clearInterval(myInt);
                    }
                  }, 50)
-                 
                }
               }
             },
@@ -291,22 +277,5 @@ export function Player() {
          </div>
         
     );
-
-}
-
-
-function pause() {
-
-}
-
-function play() {
-
-}
-
-function rewind() {
-
-}
-
-function scroll() {
 
 }

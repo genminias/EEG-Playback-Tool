@@ -3,7 +3,6 @@ import { navigate } from "@reach/router";
 
 import { notion, useNotion } from "../services/notion";
 import "firebase/firestore";
-//import { contextBridge } from 'electron';
 import { eegContent } from "../pages/Dashboard";
 
 /**
@@ -24,61 +23,46 @@ export function Recording() {
             navigate("/login");
         }
 
-        setDataCheck(false); //make sure this is in the right place
-        setLoading(true);
-        getMemories();
-        setLoading(false);
-
-        // we need error handling here, ex: if there's no recordings
-        async function getMemories() {
-            var tempInfo = [];
-            const memoriesRef = notion.__getApp().firestore().collection("memories");
-            const snapshot = await memoriesRef
-                .where("type", "==", "epoch")
-                .where("userId", "==", user.uid)
-                .get()
-                .catch((error) => { // not sure if this catch works
-                    setError(error.message);
+        if (user) {
+            setDataCheck(false);
+            setLoading(true);
+            getMemories();
+            setLoading(false);
+            
+            async function getMemories() {
+                var tempInfo = [];
+                const memoriesRef = notion.__getApp().firestore().collection("memories");
+                const snapshot = await memoriesRef
+                    .where("type", "==", "epoch")
+                    .where("userId", "==", user.uid)
+                    .get()
+                    .catch((error) => {
+                        setError(error.message);
+                    });
+                var select = document.getElementById("recordingSelect");
+                snapshot.forEach(doc => {
+                    tempInfo.push(doc.data());
+                    var opt = doc.data().name;
+                    var el = document.createElement("option");
+                    el.textContent = opt;
+                    el.value = opt;
+                    select.appendChild(el);
                 });
-            var select = document.getElementById("recordingSelect");
-            snapshot.forEach(doc => {
-                /* const memory = doc.data();
-                dataFunction(memory.id).then(console.log); */
-                //console.log(doc.data());
-                tempInfo.push(doc.data());
-                var opt = doc.data().name;
-                var el = document.createElement("option");
-                el.textContent = opt;
-                el.value = opt;
-                select.appendChild(el);
-            });
-            setRecordingsInfo(tempInfo);
+                setRecordingsInfo(tempInfo);
+            }
         }
     }, [user]);
 
-    /* function dataFunction(memoryId) {
-        return notion.__getApp()
-            .functions()
-            .httpsCallable("samplesConverter")({
-              memoryId: memoryId,
-              formatType: "json"
-            })
-    } */
-
     function onSubmit(event) {
-        event.preventDefault(); // do we want this to happen ?
+        event.preventDefault();
         for (var i = 0; i < recordingsInfo.length; i++) {
             if (recordingName == recordingsInfo[i].name) {
-                console.log("found " + recordingsInfo[i].name + " " + recordingsInfo[i].json); //test
                 var xhr = new XMLHttpRequest();
                 xhr.responseType = 'json';
                 xhr.onload = (event) => {
                     var eegDoc = xhr.response;
                     setEegSamples(eegDoc.samples);
                     setDataCheck(true);
-                    console.log(typeof eegDoc); //test - object
-                    console.log(eegDoc.channels); //test - this works it returns 8 !
-                    console.log(eegDoc.samples[0].data[0]); //test
                 };
                 xhr.open('GET', recordingsInfo[i].json);
                 xhr.send();
@@ -110,7 +94,7 @@ export function Recording() {
                 <button type="submit" className="card-btn" disabled={loading}>
                     {loading ? "Loading Recordings..." : "Select Recording"}
                 </button>
-                <button type="submit" className="card-btn" disabled={loading} onClick={() => window.location.reload(false)}>Update Recordings</button> {/* is there a way to refresh the component instead of the whole page ? */}
+                <button type="submit" className="card-btn" disabled={loading} onClick={() => window.location.reload(false)}>Update Recordings</button>
 
             </form>
         </main>
