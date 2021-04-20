@@ -207,11 +207,9 @@ export function Player() {
               title: {
                 text: null
               },
-              _labels: {
-                formatter: function() {
-                  return Math.abs(this.value);
-                }
-              }
+              labels: {
+                enabled: false
+            }
             },
          
             plotOptions: {
