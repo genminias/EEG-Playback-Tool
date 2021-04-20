@@ -37,6 +37,6 @@
     - Test: Select recording from dropdown menu that corresponds with the ERP data type, press select button
     - Expected Result: The app updates the chart and begins to display the data in chronological order 
 
-# Case 10: Display dataset of type Resting
+## Case 10: Display dataset of type Resting
     - Test: Select recording from dropdown menu that corresponds with the Resting data type, press select button
     - Expected Result: The app updates the chart and begins to display the data in chronological order 
