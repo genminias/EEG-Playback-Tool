@@ -109,8 +109,8 @@ export function Player() {
             datasets: [graphChannel1, graphChannel2, graphChannel3, graphChannel4, graphChannel5, graphChannel6, graphChannel7, graphChannel8]
         };
 
-        var maximum = channel1.length / 275;  
- 
+        var maximum = channel1.length / 275;
+
 
         var removeSVG = function(rem) {
             rem.element.remove();
@@ -123,26 +123,26 @@ export function Player() {
               stroke: 'black',
               'stroke-width': 2
             }).add();
-         
+
             var timeId = window.setTimeout(function() {
               removeSVG(rem)
             }, 100);
-         
+
         };
 
         var animation = function() {
 
             let loc = chart.series[0].points;
-         
+
             for (let i = 0; i < loc.length; i++) {
-         
+
               var x = loc[i].plotX;
               var y = loc[i].plotY;
               timeout(i, x, y);
-         
-         
+
+
             }
-         
+
         };
 
         var timeout = function(i, x, y) {
@@ -273,8 +273,6 @@ export function Player() {
                 data: []
               }],
 
-              
-
               responsive: {
                 rules: [{
                     condition: {
@@ -289,15 +287,14 @@ export function Player() {
                     }
                 }]
             }
-         
-         
+
           });
           animation();
     });
 const styles = {
-    minWidth: "1010px",
-    maxWidth: "1500px",
-    height: "1100px",
+    minWidth: "900px",
+    maxWidth: "900px",
+    height: "1000px",
     margin: "0 auto"
 };
     return (
