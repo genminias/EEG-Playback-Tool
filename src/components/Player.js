@@ -18,6 +18,7 @@ export function Player() {
 
     useEffect(() => {
         const ctx = document.getElementById("myChart");
+        
 
         if (dataCheck === true) {
             console.log("made it"); //test
@@ -302,7 +303,8 @@ const styles = {
             <div className="graph">
                 <div id="container" style={styles} />
             </div>
-        </div>
+         </div>
+        
     );
 
 }
