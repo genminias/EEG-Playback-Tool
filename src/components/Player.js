@@ -16,8 +16,8 @@ export function Player() {
     const sampleScale = 110;
 
     useEffect(() => {
-        const ctx = document.getElementById("myChart"); 
-        
+        const ctx = document.getElementById("myChart");
+
         if (dataCheck === true) {
             for (var i = 0; i < eegSamples.length; i++) { // creation of data channels for different brainwaves
                 channel1.push(+eegSamples[i].data[0] + (sampleScale * 7));
@@ -101,14 +101,14 @@ export function Player() {
             borderColor: 'pink'
         };
 
-        var eegGraphData = { 
+        var eegGraphData = {
             labels: timestamps,
             datasets: [graphChannel1, graphChannel2, graphChannel3, graphChannel4, graphChannel5, graphChannel6, graphChannel7, graphChannel8]
         };
 
         var maximum = channel1.length / 275; // elements shown on chart at once
 
-        var removeSVG = function(rem) { //remove element from chart 
+        var removeSVG = function(rem) { //remove element from chart
             rem.element.remove();
         };
 
@@ -148,7 +148,7 @@ export function Player() {
                   load: function () {
                    var chart = this;
                  var myInt = setInterval(function () {
-                 
+
                  if (channel1.length) { //iterate through datasets and add to graph
                      chart.series[0].addPoint(channel1.shift(), true, false, false);
                      chart.series[1].addPoint(channel2.shift(), true, false, false);
@@ -166,9 +166,9 @@ export function Player() {
                            len
                        );
                    }
-                   
+
                    chart.redraw();
-                   
+
                    } else {
                        clearInterval(myInt);
                    }
@@ -186,7 +186,7 @@ export function Player() {
               labels: {
                 step: .5
               }
-            }, 
+            },
             yAxis: { // y axis
               title: {
                 text: null
@@ -195,21 +195,21 @@ export function Player() {
                 enabled: false
             }
             },
-         
+
             plotOptions: {
               series: {
                 turboThreshold: 1,
                 stacking: false,
               }
             },
-         
+
             tooltip: { // shows point on graph
               formatter: function() {
                 return '<b>' + this.series.name + ' data point ' + this.point.category + '</b><br/>' +
                   'Total: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
               }
             },
-         
+
             series: [{ // data sets
               boostThreshold: 1,
               name: 'Channel 1',
@@ -275,7 +275,7 @@ export function Player() {
                 <div id="container" style={styles} />
             </div>
          </div>
-        
+
     );
 
 }
