@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { navigate } from "@reach/router";
+import Highcharts from 'highcharts';
 
 import { useNotion } from "../services/notion";
 import { Nav } from "../components/Nav";
