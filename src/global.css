@@ -118,9 +118,9 @@ img {
   justify-content: center;
   width: 300px;
   min-height: 150px;
-  padding: 30px 20px;
+  padding: 20px 10px;
   border-radius: 8px;
-  margin: 20px;
+  margin: 10px;
 }
 
 .card-heading {
