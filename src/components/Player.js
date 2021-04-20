@@ -194,7 +194,7 @@ export function Player() {
             title: {
               text: 'EEG Data'
             },
-            xAxis: [{
+            xAxis: {
                  max: maximum,
                  type: 'datetime',
                  //tickPixelInterval:5,
@@ -202,16 +202,7 @@ export function Player() {
               labels: {
                 step: .5
               }
-            }, { // mirror axis on right side
-              opposite: true,
-              type: 'datetime',
-              //tickPixelInterval:50,
-              linkedTo: 0,
-              labels: {
-                step: .5
-              },
-              
-            }],
+            }, 
             yAxis: {
               title: {
                 text: null
