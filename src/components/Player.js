@@ -295,18 +295,3 @@ export function Player() {
 }
 
 
-function pause() {
-
-}
-
-function play() {
-
-}
-
-function rewind() {
-
-}
-
-function scroll() {
-
-}
