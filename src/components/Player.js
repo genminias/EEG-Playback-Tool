@@ -17,12 +17,12 @@ export function Player() {
     const sampleScale = 110;
 
     useEffect(() => {
-        const ctx = document.getElementById("myChart");
+        const ctx = document.getElementById("myChart"); 
         
 
         if (dataCheck === true) {
             console.log("made it"); //test
-            for (var i = 0; i < eegSamples.length; i++) {
+            for (var i = 0; i < eegSamples.length; i++) { // creation of data channels for different brainwaves
                 channel1.push(+eegSamples[i].data[0] + (sampleScale * 7));
                 channel2.push(+eegSamples[i].data[1] + (sampleScale * 6));
                 channel3.push(+eegSamples[i].data[2] + (sampleScale * 5));
@@ -105,19 +105,19 @@ export function Player() {
             borderColor: 'pink'
         };
 
-        var eegGraphData = {
+        var eegGraphData = { 
             labels: timestamps,
             datasets: [graphChannel1, graphChannel2, graphChannel3, graphChannel4, graphChannel5, graphChannel6, graphChannel7, graphChannel8]
         };
 
-        var maximum = channel1.length / 275;
+        var maximum = channel1.length / 275; // elements shown on chart at once
 
 
-        var removeSVG = function(rem) {
+        var removeSVG = function(rem) { //remove element from chart 
             rem.element.remove();
         };
 
-        var a = function(x, y) {
+        var a = function(x, y) { // chart render
             console.log("x,y in timeout--", x, y);
             var rem = chart.renderer.rect(y, x, 100, 5, 10).attr({
               fill: 'red',
@@ -131,7 +131,7 @@ export function Player() {
 
         };
 
-        var animation = function() {
+        var animation = function() { //chart animation
 
             let loc = chart.series[0].points;
 
@@ -146,23 +146,22 @@ export function Player() {
 
         };
 
-        var timeout = function(i, x, y) {
+        var timeout = function(i, x, y) { //timeout function
             window.setTimeout(function() {
               a(x, y);
             }, i * 100);
           }
 
-        var chart = Highcharts.chart('container', {
+        var chart = Highcharts.chart('container', { //chart creation
             chart: {
               type: 'line',
               inverted: 'true',
               events: {
                   load: function () {
                    var chart = this;
-                   console.log("hello dfgbhnj");
                  var myInt = setInterval(function () {
                  
-                 if (channel1.length) {
+                 if (channel1.length) { //iterate through datasets and add to graph
                      chart.series[0].addPoint(channel1.shift(), true, false, false);
                      chart.series[1].addPoint(channel2.shift(), true, false, false);
                      chart.series[2].addPoint(channel3.shift(), true, false, false);
@@ -194,16 +193,15 @@ export function Player() {
             title: {
               text: 'EEG Data'
             },
-            xAxis: {
+            xAxis: { // x axis
                  max: maximum,
                  type: 'datetime',
-                 //tickPixelInterval:5,
               reversed: false, // change direction of animation
               labels: {
                 step: .5
               }
             }, 
-            yAxis: {
+            yAxis: { // y axis
               title: {
                 text: null
               },
@@ -216,20 +214,17 @@ export function Player() {
               series: {
                 turboThreshold: 1,
                 stacking: false,
-                // animation: {
-                //   duration: 1
-                // }
               }
             },
          
-            tooltip: {
+            tooltip: { // shows point on graph
               formatter: function() {
-                return '<b>' + this.series.name + ' revenue on ' + this.point.category + '</b><br/>' +
+                return '<b>' + this.series.name + ' data point ' + this.point.category + '</b><br/>' +
                   'Total: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
               }
             },
          
-            series: [{
+            series: [{ // data sets
               boostThreshold: 1,
               name: 'Channel 1',
               data: []
@@ -268,7 +263,7 @@ export function Player() {
                     condition: {
                         maxWidth: 500
                     },
-                    chartOptions: {
+                    chartOptions: { //alignment of graph
                         legend: {
                             layout: 'vertical',
                             align: 'right',
@@ -281,7 +276,8 @@ export function Player() {
           });
           animation();
     });
-const styles = {
+
+    const styles = { //size of chart
     minWidth: "900px",
     maxWidth: "1000px",
     height: "1200px",
