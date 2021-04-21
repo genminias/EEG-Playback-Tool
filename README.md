@@ -42,3 +42,5 @@
 
 ## Video with Demo
 -  https://youtu.be/6Pp97NNcHfs
+## Repository Link
+-  https://github.com/genminias/EEG-Playback-Tool
