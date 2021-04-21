@@ -13,8 +13,6 @@ const createWindow = () => {
     `file://${path.join(__dirname, '../build/index.html')}`
   mainWindow.loadURL(appUrl)
   mainWindow.maximize()
-  mainWindow.$ = mainWindow.jQuery = require('jquery');
-  console.log( [$, jQuery ]);
   mainWindow.setFullScreen(false)
   mainWindow.on('closed', () => mainWindow = null)
 }
